@@ -15,6 +15,88 @@ function fpan_theme_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	/* -------------------------------------------------------------------------
+	 * Footer Information Section
+	 * Appearance → Customize → Footer Information
+	 * ------------------------------------------------------------------------- */
+
+	// Section — groups all four fields under one collapsible panel
+	$wp_customize->add_section(
+		'fpan_footer_info',
+		array(
+			'title'    => esc_html__( 'Footer Information', 'fpan-theme' ),
+			'priority' => 130, // appears after Colors, below default sections
+		)
+	);
+
+	// --- Footer Description ---
+	$wp_customize->add_setting(
+		'fpan_footer_description',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_textarea_field',
+		)
+	);
+	$wp_customize->add_control(
+		'fpan_footer_description',
+		array(
+			'label'   => esc_html__( 'Footer Description', 'fpan-theme' ),
+			'section' => 'fpan_footer_info',
+			'type'    => 'textarea',
+		)
+	);
+
+	// --- Footer Address ---
+	$wp_customize->add_setting(
+		'fpan_footer_address',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_textarea_field',
+		)
+	);
+	$wp_customize->add_control(
+		'fpan_footer_address',
+		array(
+			'label'   => esc_html__( 'Footer Address', 'fpan-theme' ),
+			'section' => 'fpan_footer_info',
+			'type'    => 'textarea',
+		)
+	);
+
+	// --- Footer Phone ---
+	$wp_customize->add_setting(
+		'fpan_footer_phone',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		'fpan_footer_phone',
+		array(
+			'label'   => esc_html__( 'Footer Phone', 'fpan-theme' ),
+			'section' => 'fpan_footer_info',
+			'type'    => 'text',
+		)
+	);
+
+	// --- Footer Email ---
+	$wp_customize->add_setting(
+		'fpan_footer_email',
+		array(
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_email',
+		)
+	);
+	$wp_customize->add_control(
+		'fpan_footer_email',
+		array(
+			'label'   => esc_html__( 'Footer Email', 'fpan-theme' ),
+			'section' => 'fpan_footer_info',
+			'type'    => 'email',
+		)
+	);
+
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
 			'blogname',
