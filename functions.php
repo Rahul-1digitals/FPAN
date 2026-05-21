@@ -144,7 +144,7 @@ function fpan_theme_scripts() {
 		'fpan-theme-main',
 		get_template_directory_uri() . '/assets/css/main.css',
 		array( 'fpan-theme-style' ),
-		_S_VERSION
+		filemtime( get_template_directory() . '/assets/css/main.css' )
 	);
 
 	wp_enqueue_script( 'fpan-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

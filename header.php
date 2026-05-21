@@ -107,10 +107,15 @@
 
 					<!-- CTA — visible on all breakpoints -->
 					<a
-						href="<?php echo esc_url( home_url( '/join-fpan' ) ); ?>"
+						href="<?php echo esc_url( home_url( '/member-login' ) ); ?>"
 						class="btn btn--primary header__cta"
 					>
-						<?php esc_html_e( 'Join FPAN', 'fpan-theme' ); ?>
+						<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+							<polyline points="10 17 15 12 10 7"/>
+							<line x1="15" y1="12" x2="3" y2="12"/>
+						</svg>
+						<?php esc_html_e( 'Member Login', 'fpan-theme' ); ?>
 					</a>
 
 					<!-- Hamburger — hidden on desktop via CSS, shown on mobile -->
