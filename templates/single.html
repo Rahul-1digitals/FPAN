@@ -1,0 +1,100 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"single-post"} -->
+<main class="wp-block-group single-post">
+
+	<!-- wp:group {"tagName":"article","className":"post-article"} -->
+	<article class="wp-block-group post-article">
+
+		<!-- ─ Hero band: white bg, constrained text, then full-width image ─ -->
+		<!-- wp:group {"className":"post-hero-wrapper"} -->
+		<div class="wp-block-group post-hero-wrapper">
+
+			<!-- wp:group {"className":"post-hero"} -->
+			<div class="wp-block-group post-hero">
+
+				<!-- wp:post-title {"level":1,"className":"post-hero__title"} /-->
+
+				<!-- wp:group {"className":"post-hero__meta","layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center"}} -->
+				<div class="wp-block-group post-hero__meta is-layout-flex is-horizontal wp-block-group-is-layout-flex">
+
+					<!-- wp:post-date {"className":"post-hero__date"} /-->
+
+					<!-- wp:post-terms {"term":"category","className":"post-hero__category"} /-->
+
+				</div>
+				<!-- /wp:group -->
+
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:post-featured-image {"aspectRatio":"16/9","className":"post-hero__image"} /-->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- ─ Article body: 720px reading width via contentSize ─ -->
+		<!-- wp:post-content {"layout":{"type":"constrained","contentSize":"720px"}} /-->
+
+	</article>
+	<!-- /wp:group -->
+
+	<!-- ─ Related posts: full-width band, reuses .post-card styles ─ -->
+	<!-- wp:group {"className":"related-posts"} -->
+	<div class="wp-block-group related-posts">
+
+		<!-- wp:group {"className":"related-posts__inner"} -->
+		<div class="wp-block-group related-posts__inner">
+
+			<!-- wp:heading {"level":2,"className":"related-posts__heading"} -->
+			<h2 class="wp-block-heading related-posts__heading">More from the Network</h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:query {"query":{"perPage":3,"postType":"post","order":"desc","orderBy":"date","exclude":[],"sticky":"","inherit":false,"excludeCurrentPost":true},"className":"related-query"} -->
+			<div class="wp-block-query related-query">
+
+				<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+
+					<!-- wp:group {"className":"post-card","layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+					<div class="wp-block-group post-card is-vertical is-layout-flex wp-block-group-is-layout-flex">
+
+						<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","className":"post-card__image"} /-->
+
+						<!-- wp:post-terms {"term":"category","className":"post-card__category"} /-->
+
+						<!-- wp:post-title {"isLink":true,"level":3,"className":"post-card__title"} /-->
+
+						<!-- wp:group {"className":"post-card__meta","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+						<div class="wp-block-group post-card__meta is-layout-flex is-horizontal wp-block-group-is-layout-flex">
+
+							<!-- wp:post-date {"className":"post-card__date"} /-->
+
+							<!-- wp:read-more {"content":"Read →","className":"post-card__read-more"} /-->
+
+						</div>
+						<!-- /wp:group -->
+
+					</div>
+					<!-- /wp:group -->
+
+				<!-- /wp:post-template -->
+
+				<!-- wp:query-no-results -->
+					<!-- wp:paragraph {"align":"center"} -->
+					<p class="has-text-align-center">No related posts found.</p>
+					<!-- /wp:paragraph -->
+				<!-- /wp:query-no-results -->
+
+			</div>
+			<!-- /wp:query -->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -99,6 +99,9 @@ function fpan_theme_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	// Inject theme styles into the Site Editor / block editor canvas.
+	add_editor_style( 'assets/css/main.css' );
 }
 add_action( 'after_setup_theme', 'fpan_theme_setup' );
 
@@ -182,4 +185,22 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Load block CSS/JS per-block rather than bundled.
+ * Required so the Navigation block's view script (hamburger JS) loads in FSE.
+ */
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
+/**
+ * Register custom block pattern category for FPAN healthcare patterns.
+ * Patterns in the patterns/ directory reference this category slug.
+ */
+function fpan_register_pattern_categories() {
+	register_block_pattern_category(
+		'fpan-healthcare',
+		array( 'label' => __( 'FPAN Healthcare', 'fpan-theme' ) )
+	);
+}
+add_action( 'init', 'fpan_register_pattern_categories' );
 

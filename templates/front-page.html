@@ -1,0 +1,370 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-main home-page","layout":{"type":"default"}} -->
+<main class="wp-block-group site-main home-page">
+
+
+	<!-- =====================================================================
+	     SECTION 1: HERO
+	     Full-width cover block. Background set in Site Editor.
+	     ===================================================================== -->
+	<!-- wp:cover {"dimRatio":70,"overlayColor":"navy-dark","isUserOverlayColor":true,"minHeight":560,"minHeightUnit":"px","align":"full","className":"home-hero","layout":{"type":"constrained"}} -->
+	<div class="wp-block-cover alignfull home-hero" style="min-height:560px">
+		<span aria-hidden="true" class="wp-block-cover__background has-navy-dark-background-color has-background-dim-70 has-background-dim"></span>
+		<div class="wp-block-cover__inner-container is-layout-constrained">
+
+			<!-- wp:group {"className":"home-hero__content","style":{"spacing":{"blockGap":"var:preset|spacing|lg"}},"layout":{"type":"constrained","contentSize":"720px"}} -->
+			<div class="wp-block-group home-hero__content">
+
+				<!-- wp:paragraph {"className":"home-hero__eyebrow","textColor":"teal-light","fontSize":"sm"} -->
+				<p class="home-hero__eyebrow has-teal-light-color has-text-color has-sm-font-size">Florida's Premier Pediatric Network</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:heading {"level":1,"textColor":"white","fontSize":"4xl","className":"home-hero__heading"} -->
+				<h1 class="wp-block-heading home-hero__heading has-white-color has-text-color has-4-xl-font-size">Advancing Pediatric Care Across Florida</h1>
+				<!-- /wp:heading -->
+
+				<!-- wp:paragraph {"textColor":"white","className":"home-hero__subheading"} -->
+				<p class="home-hero__subheading has-white-color has-text-color">FPAN is a clinically integrated network connecting pediatric practices to improve outcomes, reduce costs, and advance value-based care.</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:buttons {"className":"home-hero__actions","layout":{"type":"flex","flexWrap":"wrap"}} -->
+				<div class="wp-block-buttons home-hero__actions">
+					<!-- wp:button {"backgroundColor":"teal","textColor":"white","className":"is-style-fill"} -->
+					<div class="wp-block-button is-style-fill">
+						<a class="wp-block-button__link has-white-color has-teal-background-color has-text-color has-background wp-element-button" href="/join-fpan">Join FPAN</a>
+					</div>
+					<!-- /wp:button -->
+					<!-- wp:button {"backgroundColor":"white","textColor":"navy","className":"is-style-outline"} -->
+					<div class="wp-block-button is-style-outline">
+						<a class="wp-block-button__link has-navy-color has-white-background-color has-text-color has-background wp-element-button" href="/about-fpan">Learn More</a>
+					</div>
+					<!-- /wp:button -->
+				</div>
+				<!-- /wp:buttons -->
+
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+	</div>
+	<!-- /wp:cover -->
+
+
+	<!-- =====================================================================
+	     SECTION 2: AUDIENCE ENTRY TILES
+	     Three pathway cards — one per visitor type.
+	     ===================================================================== -->
+	<!-- wp:group {"align":"full","backgroundColor":"bg","className":"home-audience","style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull home-audience has-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--3xl);padding-bottom:var(--wp--preset--spacing--3xl)">
+
+		<!-- wp:columns {"align":"wide","className":"audience-tiles","style":{"spacing":{"blockGap":"var:preset|spacing|lg"}}} -->
+		<div class="wp-block-columns alignwide audience-tiles">
+
+			<!-- wp:column {"className":"audience-tile"} -->
+			<div class="wp-block-column audience-tile">
+				<!-- wp:heading {"level":3,"textColor":"navy","fontSize":"lg","className":"audience-tile__title"} -->
+				<h3 class="wp-block-heading audience-tile__title has-navy-color has-text-color has-lg-font-size">I'm a Physician</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"textColor":"text-muted","className":"audience-tile__description"} -->
+				<p class="audience-tile__description has-text-muted-color has-text-color">Join our network, access performance data, and participate in quality improvement programs.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:button {"className":"audience-tile__link is-style-fill","backgroundColor":"teal","textColor":"white"} -->
+				<div class="wp-block-button audience-tile__link is-style-fill">
+					<a class="wp-block-button__link has-white-color has-teal-background-color has-text-color has-background wp-element-button" href="/for-physicians">Physician Resources</a>
+				</div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"audience-tile"} -->
+			<div class="wp-block-column audience-tile">
+				<!-- wp:heading {"level":3,"textColor":"navy","fontSize":"lg","className":"audience-tile__title"} -->
+				<h3 class="wp-block-heading audience-tile__title has-navy-color has-text-color has-lg-font-size">I'm a Patient or Family</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"textColor":"text-muted","className":"audience-tile__description"} -->
+				<p class="audience-tile__description has-text-muted-color has-text-color">Find a participating provider, understand your care options, and access patient resources.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:button {"className":"audience-tile__link is-style-fill","backgroundColor":"teal","textColor":"white"} -->
+				<div class="wp-block-button audience-tile__link is-style-fill">
+					<a class="wp-block-button__link has-white-color has-teal-background-color has-text-color has-background wp-element-button" href="/for-patients">Patient Resources</a>
+				</div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"audience-tile"} -->
+			<div class="wp-block-column audience-tile">
+				<!-- wp:heading {"level":3,"textColor":"navy","fontSize":"lg","className":"audience-tile__title"} -->
+				<h3 class="wp-block-heading audience-tile__title has-navy-color has-text-color has-lg-font-size">I'm a Health Plan Partner</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"textColor":"text-muted","className":"audience-tile__description"} -->
+				<p class="audience-tile__description has-text-muted-color has-text-color">Explore value-based care contracts, shared savings models, and network performance data.</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:button {"className":"audience-tile__link is-style-fill","backgroundColor":"teal","textColor":"white"} -->
+				<div class="wp-block-button audience-tile__link is-style-fill">
+					<a class="wp-block-button__link has-white-color has-teal-background-color has-text-color has-background wp-element-button" href="/for-partners">Partner Information</a>
+				</div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:column -->
+
+		</div>
+		<!-- /wp:columns -->
+
+	</div>
+	<!-- /wp:group -->
+
+
+	<!-- =====================================================================
+	     SECTION 3: QUICK ACCESS LINKS
+	     ===================================================================== -->
+	<!-- wp:group {"align":"full","backgroundColor":"white","className":"home-quick-access","style":{"spacing":{"padding":{"top":"var:preset|spacing|2xl","bottom":"var:preset|spacing|2xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull home-quick-access has-white-background-color has-background" style="padding-top:var(--wp--preset--spacing--2xl);padding-bottom:var(--wp--preset--spacing--2xl)">
+
+		<!-- wp:heading {"level":2,"textColor":"navy","fontSize":"2xl","textAlign":"center","className":"section__heading"} -->
+		<h2 class="wp-block-heading section__heading has-navy-color has-text-color has-2-xl-font-size has-text-align-center">Quick Access</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:columns {"align":"wide","isStackedOnMobile":true,"className":"quick-access-grid","style":{"spacing":{"blockGap":"var:preset|spacing|md"}}} -->
+		<div class="wp-block-columns alignwide quick-access-grid">
+
+			<!-- wp:column {"className":"quick-access-item"} -->
+			<div class="wp-block-column quick-access-item">
+				<!-- wp:paragraph {"align":"center"} --><p class="has-text-align-center"><a href="/provider-directory">Provider Directory</a></p><!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"quick-access-item"} -->
+			<div class="wp-block-column quick-access-item">
+				<!-- wp:paragraph {"align":"center"} --><p class="has-text-align-center"><a href="/member-login">Member Login</a></p><!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"quick-access-item"} -->
+			<div class="wp-block-column quick-access-item">
+				<!-- wp:paragraph {"align":"center"} --><p class="has-text-align-center"><a href="/clinical-resources">Clinical Resources</a></p><!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"quick-access-item"} -->
+			<div class="wp-block-column quick-access-item">
+				<!-- wp:paragraph {"align":"center"} --><p class="has-text-align-center"><a href="/aco-reach">ACO REACH</a></p><!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"quick-access-item"} -->
+			<div class="wp-block-column quick-access-item">
+				<!-- wp:paragraph {"align":"center"} --><p class="has-text-align-center"><a href="/news-events">News &amp; Events</a></p><!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"quick-access-item"} -->
+			<div class="wp-block-column quick-access-item">
+				<!-- wp:paragraph {"align":"center"} --><p class="has-text-align-center"><a href="/contact">Contact Us</a></p><!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+		</div>
+		<!-- /wp:columns -->
+
+	</div>
+	<!-- /wp:group -->
+
+
+	<!-- =====================================================================
+	     SECTION 4: STATISTICS
+	     Four key network numbers on a navy background.
+	     ===================================================================== -->
+	<!-- wp:group {"align":"full","backgroundColor":"navy","textColor":"white","className":"home-stats","style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull home-stats has-white-color has-navy-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--3xl);padding-bottom:var(--wp--preset--spacing--3xl)">
+
+		<!-- wp:columns {"align":"wide","className":"stats-grid","style":{"spacing":{"blockGap":"var:preset|spacing|xl"}}} -->
+		<div class="wp-block-columns alignwide stats-grid">
+
+			<!-- wp:column {"className":"stat-item","textAlign":"center"} -->
+			<div class="wp-block-column stat-item">
+				<!-- wp:heading {"level":3,"textColor":"teal-light","fontSize":"4xl","textAlign":"center","className":"stat-item__value"} -->
+				<h3 class="wp-block-heading stat-item__value has-teal-light-color has-text-color has-4-xl-font-size has-text-align-center">150+</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"textColor":"white","align":"center","className":"stat-item__label"} -->
+				<p class="stat-item__label has-white-color has-text-color has-text-align-center">Participating Practices</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"stat-item"} -->
+			<div class="wp-block-column stat-item">
+				<!-- wp:heading {"level":3,"textColor":"teal-light","fontSize":"4xl","textAlign":"center","className":"stat-item__value"} -->
+				<h3 class="wp-block-heading stat-item__value has-teal-light-color has-text-color has-4-xl-font-size has-text-align-center">400+</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"textColor":"white","align":"center","className":"stat-item__label"} -->
+				<p class="stat-item__label has-white-color has-text-color has-text-align-center">Physicians in Network</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"stat-item"} -->
+			<div class="wp-block-column stat-item">
+				<!-- wp:heading {"level":3,"textColor":"teal-light","fontSize":"4xl","textAlign":"center","className":"stat-item__value"} -->
+				<h3 class="wp-block-heading stat-item__value has-teal-light-color has-text-color has-4-xl-font-size has-text-align-center">500K+</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"textColor":"white","align":"center","className":"stat-item__label"} -->
+				<p class="stat-item__label has-white-color has-text-color has-text-align-center">Children Served</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"className":"stat-item"} -->
+			<div class="wp-block-column stat-item">
+				<!-- wp:heading {"level":3,"textColor":"teal-light","fontSize":"4xl","textAlign":"center","className":"stat-item__value"} -->
+				<h3 class="wp-block-heading stat-item__value has-teal-light-color has-text-color has-4-xl-font-size has-text-align-center">25+</h3>
+				<!-- /wp:heading -->
+				<!-- wp:paragraph {"textColor":"white","align":"center","className":"stat-item__label"} -->
+				<p class="stat-item__label has-white-color has-text-color has-text-align-center">Counties Covered</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:column -->
+
+		</div>
+		<!-- /wp:columns -->
+
+	</div>
+	<!-- /wp:group -->
+
+
+	<!-- =====================================================================
+	     SECTION 5: FEATURED RESOURCES PREVIEW
+	     Live query — pulls 3 latest posts from the resources category.
+	     ===================================================================== -->
+	<!-- wp:group {"align":"full","backgroundColor":"bg-alt","className":"home-resources","style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull home-resources has-bg-alt-background-color has-background" style="padding-top:var(--wp--preset--spacing--3xl);padding-bottom:var(--wp--preset--spacing--3xl)">
+
+		<!-- wp:group {"align":"wide","className":"section__header","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+		<div class="wp-block-group alignwide section__header">
+			<!-- wp:heading {"level":2,"textColor":"navy","fontSize":"2xl","className":"section__heading"} -->
+			<h2 class="wp-block-heading section__heading has-navy-color has-text-color has-2-xl-font-size">Clinical Resources</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph --><p><a href="/clinical-resources">View All Resources →</a></p><!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:query {"query":{"perPage":3,"postType":"post","order":"desc","orderBy":"date","categoryName":"resources","inherit":false},"align":"wide","className":"resource-cards"} -->
+		<div class="wp-block-query alignwide resource-cards">
+
+			<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+				<!-- wp:group {"className":"resource-card","style":{"spacing":{"blockGap":"var:preset|spacing|sm"}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group resource-card">
+					<!-- wp:post-featured-image {"isLink":true,"className":"resource-card__image"} /-->
+					<!-- wp:post-date {"className":"resource-card__meta","fontSize":"xs"} /-->
+					<!-- wp:post-title {"isLink":true,"level":3,"className":"resource-card__title","fontSize":"md"} /-->
+					<!-- wp:post-excerpt {"moreText":"","numberOfWords":18,"className":"resource-card__excerpt"} /-->
+				</div>
+				<!-- /wp:group -->
+			<!-- /wp:post-template -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"align":"center","textColor":"text-muted"} -->
+				<p class="has-text-muted-color has-text-color has-text-align-center">Resources coming soon.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+
+		</div>
+		<!-- /wp:query -->
+
+	</div>
+	<!-- /wp:group -->
+
+
+	<!-- =====================================================================
+	     SECTION 6: NEWS & EVENTS PREVIEW
+	     Live query — pulls 3 latest posts from the news-events category.
+	     ===================================================================== -->
+	<!-- wp:group {"align":"full","backgroundColor":"white","className":"home-news","style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull home-news has-white-background-color has-background" style="padding-top:var(--wp--preset--spacing--3xl);padding-bottom:var(--wp--preset--spacing--3xl)">
+
+		<!-- wp:group {"align":"wide","className":"section__header","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+		<div class="wp-block-group alignwide section__header">
+			<!-- wp:heading {"level":2,"textColor":"navy","fontSize":"2xl","className":"section__heading"} -->
+			<h2 class="wp-block-heading section__heading has-navy-color has-text-color has-2-xl-font-size">News &amp; Events</h2>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph --><p><a href="/news-events">View All →</a></p><!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:query {"query":{"perPage":3,"postType":"post","order":"desc","orderBy":"date","categoryName":"news-events","inherit":false},"align":"wide","className":"news-cards"} -->
+		<div class="wp-block-query alignwide news-cards">
+
+			<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+				<!-- wp:group {"className":"news-card","style":{"spacing":{"blockGap":"var:preset|spacing|sm"}},"layout":{"type":"constrained"}} -->
+				<div class="wp-block-group news-card">
+					<!-- wp:post-date {"className":"news-card__meta","fontSize":"xs"} /-->
+					<!-- wp:post-title {"isLink":true,"level":3,"className":"news-card__title","fontSize":"md"} /-->
+					<!-- wp:post-excerpt {"moreText":"Read More","numberOfWords":18,"className":"news-card__excerpt"} /-->
+				</div>
+				<!-- /wp:group -->
+			<!-- /wp:post-template -->
+
+			<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"align":"center","textColor":"text-muted"} -->
+				<p class="has-text-muted-color has-text-color has-text-align-center">No news or events yet.</p>
+				<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+
+		</div>
+		<!-- /wp:query -->
+
+	</div>
+	<!-- /wp:group -->
+
+
+	<!-- =====================================================================
+	     SECTION 7: CTA BANNER
+	     Single conversion moment. Teal-to-navy gradient background.
+	     ===================================================================== -->
+	<!-- wp:cover {"gradient":"navy-to-teal","dimRatio":100,"isUserOverlayColor":true,"align":"full","className":"home-cta","minHeight":280,"minHeightUnit":"px","layout":{"type":"constrained"}} -->
+	<div class="wp-block-cover alignfull home-cta" style="min-height:280px">
+		<span aria-hidden="true" class="wp-block-cover__background has-navy-to-teal-gradient-background has-background-dim-100 has-background-dim wp-block-cover__gradient-background"></span>
+		<div class="wp-block-cover__inner-container is-layout-constrained">
+
+			<!-- wp:group {"className":"home-cta__inner","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+			<div class="wp-block-group home-cta__inner">
+
+				<!-- wp:group {"className":"home-cta__content","layout":{"type":"constrained","contentSize":"600px"}} -->
+				<div class="wp-block-group home-cta__content">
+					<!-- wp:heading {"level":2,"textColor":"white","fontSize":"2xl","className":"home-cta__heading"} -->
+					<h2 class="wp-block-heading home-cta__heading has-white-color has-text-color has-2-xl-font-size">Ready to Join Florida's Leading Pediatric Network?</h2>
+					<!-- /wp:heading -->
+					<!-- wp:paragraph {"textColor":"white","className":"home-cta__subheading"} -->
+					<p class="home-cta__subheading has-white-color has-text-color">Connect your practice with FPAN and start delivering better outcomes for the children of Florida.</p>
+					<!-- /wp:paragraph -->
+				</div>
+				<!-- /wp:group -->
+
+				<!-- wp:buttons {"className":"home-cta__actions","layout":{"type":"flex","flexWrap":"wrap"}} -->
+				<div class="wp-block-buttons home-cta__actions">
+					<!-- wp:button {"backgroundColor":"white","textColor":"navy","className":"is-style-fill"} -->
+					<div class="wp-block-button is-style-fill">
+						<a class="wp-block-button__link has-navy-color has-white-background-color has-text-color has-background wp-element-button" href="/join-fpan">Join FPAN Today</a>
+					</div>
+					<!-- /wp:button -->
+					<!-- wp:button {"className":"is-style-outline","textColor":"white"} -->
+					<div class="wp-block-button is-style-outline">
+						<a class="wp-block-button__link has-white-color has-text-color wp-element-button" href="/contact">Contact Us</a>
+					</div>
+					<!-- /wp:button -->
+				</div>
+				<!-- /wp:buttons -->
+
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+	</div>
+	<!-- /wp:cover -->
+
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
