@@ -131,5 +131,149 @@ function fpan_register_block_patterns() {
 			'content'     => fpan_pattern_content( 'about-leadership-preview' ),
 		]
 	);
+
+	// ── Staff Section ──────────────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/staff-section',
+		[
+			'title'       => __( 'Staff Section', 'fpan-theme' ),
+			'description' => __( 'A grouped staff section with a heading and a responsive 3-column card grid. Insert once per team group. Replace placeholder names and photos with real content.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'staff', 'team', 'leadership', 'cards', 'grid', 'people', 'section' ],
+			'content'     => fpan_pattern_content( 'staff-section' ),
+		]
+	);
+
+	// ── Staff Card ─────────────────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/staff-card',
+		[
+			'title'       => __( 'Staff Card', 'fpan-theme' ),
+			'description' => __( 'A single staff profile card with circular photo, name, and title. Insert inside a Staff Section grid to add more team members.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'staff', 'card', 'profile', 'headshot', 'team member', 'person' ],
+			'content'     => fpan_pattern_content( 'staff-card' ),
+		]
+	);
+
+	// ── Governance Overview ────────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/governance-overview',
+		[
+			'title'       => __( 'Governance Overview', 'fpan-theme' ),
+			'description' => __( 'Three-column overview cards explaining Board of Directors, Operating Committee, and Sub-committees.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'governance', 'board', 'overview', 'committees', 'structure', 'about' ],
+			'content'     => fpan_pattern_content( 'governance-overview' ),
+		]
+	);
+
+	// ── Governance Jump Navigation ─────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/governance-jump-nav',
+		[
+			'title'       => __( 'Governance Jump Navigation', 'fpan-theme' ),
+			'description' => __( 'Horizontal pill-link navigation bar for jumping to committee sections. No JavaScript required.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'jump nav', 'anchor', 'navigation', 'committees', 'governance' ],
+			'content'     => fpan_pattern_content( 'governance-jump-nav' ),
+		]
+	);
+
+	// ── Committee Section ──────────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/committee-section',
+		[
+			'title'       => __( 'Committee Section', 'fpan-theme' ),
+			'description' => __( 'A full committee section with heading, description, and a 2-column member grid. Insert once per committee. Update the heading, anchor ID (Advanced tab), and member placeholders.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'committee', 'governance', 'members', 'board', 'section', 'leadership' ],
+			'content'     => fpan_pattern_content( 'committee-section' ),
+		]
+	);
+
+	// ── Committee Member Entry ─────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/committee-member',
+		[
+			'title'       => __( 'Committee Member Entry', 'fpan-theme' ),
+			'description' => __( 'A single committee member entry with name and role. Insert inside a Committee Section\'s member grid to add more members.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'committee', 'member', 'governance', 'person', 'name', 'role', 'board' ],
+			'content'     => fpan_pattern_content( 'committee-member' ),
+		]
+	);
+
+	// ── ACO REACH: Status Notice ───────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/aco-reach-notice',
+		[
+			'title'       => __( 'ACO REACH Status Notice', 'fpan-theme' ),
+			'description' => __( 'Informational notice banner for ACO REACH participation status. Update text as needed.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'aco', 'reach', 'notice', 'status', 'program', 'ended' ],
+			'content'     => fpan_pattern_content( 'aco-reach-notice' ),
+		]
+	);
+
+	// ── ACO REACH: Jump Navigation ─────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/aco-reach-jump-nav',
+		[
+			'title'       => __( 'ACO REACH Jump Navigation', 'fpan-theme' ),
+			'description' => __( 'Horizontal anchor-link navigation bar for jumping to ACO REACH page sections. No JavaScript required.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'aco', 'reach', 'jump nav', 'anchor', 'navigation', 'links' ],
+			'content'     => fpan_pattern_content( 'aco-reach-jump-nav' ),
+		]
+	);
+
+	// ── ACO REACH: Provider Documents ─────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/aco-reach-documents',
+		[
+			'title'       => __( 'ACO REACH Provider Documents', 'fpan-theme' ),
+			'description' => __( 'Download cards for the Participating Providers List and Preferred Providers List Excel documents.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'aco', 'reach', 'documents', 'download', 'providers', 'excel' ],
+			'content'     => fpan_pattern_content( 'aco-reach-documents' ),
+		]
+	);
+
+	// ── ACO REACH: People Section ──────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/aco-reach-people-section',
+		[
+			'title'       => __( 'ACO REACH People Section', 'fpan-theme' ),
+			'description' => __( 'Reusable 2-column person card grid for ACO REACH Leadership and Governing Body sections. Update heading and set anchor ID in Advanced tab.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'aco', 'reach', 'leadership', 'governing body', 'people', 'members', 'grid' ],
+			'content'     => fpan_pattern_content( 'aco-reach-people-section' ),
+		]
+	);
+
+	// ── ACO REACH: Metrics Table ───────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/aco-reach-metrics-section',
+		[
+			'title'       => __( 'ACO REACH Metrics Table', 'fpan-theme' ),
+			'description' => __( 'Data table section for ACO REACH performance metrics. Defaults to Shared Savings & Losses layout. Reuse for Quality Measures by updating heading, anchor, and column headers.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'aco', 'reach', 'metrics', 'table', 'shared savings', 'quality measures', 'performance' ],
+			'content'     => fpan_pattern_content( 'aco-reach-metrics-section' ),
+		]
+	);
+
+	// ── ACO REACH: External Resource CTA ──────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/aco-reach-resource-cta',
+		[
+			'title'       => __( 'ACO REACH External Resource CTA', 'fpan-theme' ),
+			'description' => __( 'Navy gradient CTA banner linking to external ACO REACH resources. Update the button URL to point to M Health Fairview.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare', 'banner' ],
+			'keywords'    => [ 'aco', 'reach', 'cta', 'resources', 'external', 'm health fairview' ],
+			'content'     => fpan_pattern_content( 'aco-reach-resource-cta' ),
+		]
+	);
 }
 add_action( 'init', 'fpan_register_block_patterns', 9 );
