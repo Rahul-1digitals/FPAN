@@ -485,6 +485,11 @@
       "name": "page-primary-clinics",
       "title": "Primary Care Clinics",
       "postTypes": [ "page" ]
+    },
+    {
+      "name": "page-for-patients",
+      "title": "For Patients",
+      "postTypes": [ "page" ]
     }
   ],
 

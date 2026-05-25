@@ -204,7 +204,7 @@ add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 
 /**
  * Register custom block pattern category for FPAN healthcare patterns.
- * Patterns in the patterns/ directory reference this category slug.
+ * Priority 5 — must run before pattern registration (priority 9).
  */
 function fpan_register_pattern_categories() {
 	register_block_pattern_category(
@@ -212,5 +212,10 @@ function fpan_register_pattern_categories() {
 		array( 'label' => __( 'FPAN Healthcare', 'fpan-theme' ) )
 	);
 }
-add_action( 'init', 'fpan_register_pattern_categories' );
+add_action( 'init', 'fpan_register_pattern_categories', 5 );
+
+/**
+ * Explicitly register all block patterns.
+ */
+require get_template_directory() . '/inc/block-patterns.php';
 

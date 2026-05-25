@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"layout_default\\\\|layout.*features\\\\|useLayoutClassName\\\\|addSaveProps.*layout\\\\|layout.*class.*save\\\\|layoutBlockSupportKey\" /c/xampp/htdocs/fpan/wp-includes/js/dist/block-editor.js | head -30)",
+      "Read(//c/xampp/htdocs/fpan/wp-includes/js/dist/**)",
+      "Read(//c/xampp/**)",
+      "Bash(mysql -u root -e \"SELECT LOCATE\\('Section header', post_content\\) as pos1, LOCATE\\('4-column', post_content\\) as pos2, LOCATE\\('CARD 1:', post_content\\) as pos3 FROM fpan.wp_posts WHERE ID=157;\")"
+    ]
+  }
+}
