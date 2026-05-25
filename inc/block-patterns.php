@@ -83,5 +83,53 @@ function fpan_register_block_patterns() {
 			'content'     => fpan_pattern_content( 'for-patients-resource-links' ),
 		]
 	);
+
+	// ── About FPAN: Mission, Vision & Strategic Priorities ─────────────────────
+	register_block_pattern(
+		'fpan-theme/about-mission-vision',
+		[
+			'title'       => __( 'Mission, Vision & Strategic Priorities', 'fpan-theme' ),
+			'description' => __( 'Mission statement, vision statement, and three strategic priority items for the About FPAN page.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'mission', 'vision', 'priorities', 'about', 'fpan', 'strategy' ],
+			'content'     => fpan_pattern_content( 'about-mission-vision' ),
+		]
+	);
+
+	// ── About FPAN: The Quadruple Aim ──────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/about-quadruple-aim',
+		[
+			'title'       => __( 'The Quadruple Aim', 'fpan-theme' ),
+			'description' => __( 'Four-column icon card layout presenting FPAN\'s Quadruple Aim framework.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'quadruple aim', 'outcomes', 'costs', 'experience', 'well-being', 'about' ],
+			'content'     => fpan_pattern_content( 'about-quadruple-aim' ),
+		]
+	);
+
+	// ── About FPAN: Key Stats ──────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/about-stats',
+		[
+			'title'       => __( 'Key Stats — By the Numbers', 'fpan-theme' ),
+			'description' => __( 'Four-column statistics bar on a navy gradient background showing FPAN network scale.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare', 'banner' ],
+			'keywords'    => [ 'stats', 'numbers', 'impact', 'providers', 'patients', 'counties' ],
+			'content'     => fpan_pattern_content( 'about-stats' ),
+		]
+	);
+
+	// ── About FPAN: Leadership & Programs Preview ──────────────────────────────
+	register_block_pattern(
+		'fpan-theme/about-leadership-preview',
+		[
+			'title'       => __( 'Leadership & Programs Preview', 'fpan-theme' ),
+			'description' => __( 'Three-column card grid linking to Staff, Governance, and ACO REACH subsection pages.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'leadership', 'staff', 'governance', 'aco reach', 'team', 'about' ],
+			'content'     => fpan_pattern_content( 'about-leadership-preview' ),
+		]
+	);
 }
 add_action( 'init', 'fpan_register_block_patterns', 9 );
