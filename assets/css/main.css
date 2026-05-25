@@ -5366,3 +5366,250 @@ pre {
     border-radius: var(--radius-lg);
   }
 }
+
+/* ============================================================
+   23. MEMBERSHIP PAGES
+   ============================================================ */
+
+/* ── MEMBERSHIP PAGE HEROES ──────────────────────────────────*/
+.membership-page-hero.wp-block-group {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #0d3a5e 100%) !important;
+}
+
+.member-responsibilities-page-hero.wp-block-group {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #1e4d6e 100%) !important;
+}
+
+.quality-improvement-page-hero.wp-block-group {
+  background: linear-gradient(135deg, #0d3a5e 0%, var(--color-teal) 100%) !important;
+}
+
+/* ── MEMBERSHIP SECTION PANELS ───────────────────────────────*/
+.fp-membership-section.wp-block-group {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-10);
+  margin-bottom: var(--space-6) !important;
+}
+
+.fp-membership-section.wp-block-group:last-child {
+  margin-bottom: 0 !important;
+}
+
+.fp-membership-section__eyebrow {
+  font-size: var(--text-sm) !important;
+  font-weight: var(--font-semibold) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 var(--space-2) !important;
+}
+
+.fp-membership-section__heading.wp-block-heading {
+  font-size: var(--text-2xl) !important;
+  font-weight: var(--font-semibold) !important;
+  color: var(--color-navy) !important;
+  letter-spacing: -0.015em;
+  margin-top: 0 !important;
+  margin-bottom: var(--space-3) !important;
+}
+
+.fp-membership-section__intro {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  max-width: 72ch;
+  margin-top: 0 !important;
+  margin-bottom: var(--space-8) !important;
+}
+
+/* ── MEMBERSHIP BENEFIT CARDS ────────────────────────────────*/
+.membership-benefit-cards.wp-block-group {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.membership-benefit-card.wp-block-group {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  transition:
+    transform     var(--transition-base),
+    box-shadow    var(--transition-base);
+}
+
+.membership-benefit-card.wp-block-group:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 35, 75, 0.1);
+}
+
+.membership-benefit-card__icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 144, 167, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  color: var(--color-teal);
+}
+
+.membership-benefit-card__title.wp-block-heading {
+  font-size: var(--text-base) !important;
+  font-weight: var(--font-semibold) !important;
+  color: var(--color-navy) !important;
+  line-height: 1.3;
+  margin: 0 0 var(--space-2) !important;
+}
+
+.membership-benefit-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0 !important;
+}
+
+/* ── MEMBERSHIP CONTENT SECTION LIST ─────────────────────────*/
+.fp-membership-list {
+  padding-left: var(--space-5);
+  margin: 0 !important;
+}
+
+.fp-membership-list li {
+  font-size: var(--text-base);
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-2);
+  padding-left: var(--space-1);
+}
+
+.fp-membership-list li:last-child {
+  margin-bottom: 0;
+}
+
+.fp-membership-list li::marker {
+  color: var(--color-teal);
+}
+
+/* ── MEMBERSHIP APPLY CTA ────────────────────────────────────*/
+.membership-apply-cta.wp-block-group {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #0d5e6d 100%) !important;
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.membership-apply-cta__heading.wp-block-heading {
+  margin-bottom: var(--space-4) !important;
+}
+
+.membership-apply-cta__text {
+  max-width: 60ch;
+  margin: 0 auto var(--space-6) !important;
+}
+
+/* ── MEMBERSHIP NAV CARDS ────────────────────────────────────*/
+.membership-nav-cards.wp-block-group {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.membership-nav-card.wp-block-group {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6) var(--space-6);
+  transition:
+    transform       var(--transition-base),
+    box-shadow      var(--transition-base),
+    border-color    var(--transition-base);
+}
+
+.membership-nav-card.wp-block-group:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 35, 75, 0.1);
+  border-color: var(--color-teal);
+}
+
+.membership-nav-card__icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 144, 167, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  color: var(--color-teal);
+}
+
+.membership-nav-card__title.wp-block-heading {
+  font-size: var(--text-lg) !important;
+  font-weight: var(--font-semibold) !important;
+  color: var(--color-navy) !important;
+  margin: 0 0 var(--space-2) !important;
+}
+
+.membership-nav-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin: 0 0 var(--space-4) !important;
+}
+
+.membership-nav-card__link {
+  font-size: var(--text-sm) !important;
+  font-weight: var(--font-semibold) !important;
+  margin: 0 !important;
+}
+
+.membership-nav-card__link a {
+  color: var(--color-teal);
+  text-decoration: none;
+}
+
+.membership-nav-card__link a:hover {
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────*/
+@media (max-width: 1200px) {
+  .membership-benefit-cards.wp-block-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1023px) {
+  .fp-membership-section.wp-block-group {
+    padding: var(--space-6) var(--space-6);
+  }
+}
+
+@media (max-width: 767px) {
+  .membership-page-hero .clinic-page-hero__heading,
+  .member-responsibilities-page-hero .clinic-page-hero__heading,
+  .quality-improvement-page-hero .clinic-page-hero__heading {
+    font-size: var(--text-3xl);
+  }
+
+  .membership-nav-cards.wp-block-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .membership-benefit-cards.wp-block-group {
+    grid-template-columns: 1fr;
+  }
+
+  .fp-membership-section.wp-block-group {
+    padding: var(--space-5) var(--space-5);
+    border-radius: var(--radius-lg);
+  }
+}

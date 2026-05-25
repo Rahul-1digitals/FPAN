@@ -275,5 +275,53 @@ function fpan_register_block_patterns() {
 			'content'     => fpan_pattern_content( 'aco-reach-resource-cta' ),
 		]
 	);
+
+	// ── Membership: Benefit Cards ──────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/membership-benefit-cards',
+		[
+			'title'       => __( 'Membership Benefit Cards', 'fpan-theme' ),
+			'description' => __( 'Four-column icon card grid presenting FPAN network membership benefits. Includes section eyebrow, heading, intro, and one card per benefit area.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'membership', 'benefits', 'network', 'cards', 'icons', 'join' ],
+			'content'     => fpan_pattern_content( 'membership-benefit-cards' ),
+		]
+	);
+
+	// ── Membership: Content Section ────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/membership-content-section',
+		[
+			'title'       => __( 'Membership Content Section', 'fpan-theme' ),
+			'description' => __( 'Reusable content section with heading, description, and bullet list. Insert once per topic on Member Responsibilities and Quality Improvement pages. Update heading and set anchor ID in Advanced tab.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'membership', 'section', 'content', 'responsibilities', 'quality', 'list' ],
+			'content'     => fpan_pattern_content( 'membership-content-section' ),
+		]
+	);
+
+	// ── Membership: Apply CTA ──────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/membership-apply-cta',
+		[
+			'title'       => __( 'Membership Apply CTA', 'fpan-theme' ),
+			'description' => __( 'Call-to-action banner for joining or contacting FPAN about membership. Shared across all three Membership section pages.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare', 'banner' ],
+			'keywords'    => [ 'membership', 'apply', 'join', 'cta', 'contact', 'network' ],
+			'content'     => fpan_pattern_content( 'membership-apply-cta' ),
+		]
+	);
+
+	// ── Membership: Navigation Cards ──────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/membership-nav-cards',
+		[
+			'title'       => __( 'Membership Navigation Cards', 'fpan-theme' ),
+			'description' => __( 'Two-column related page navigation cards for the Membership section. Pre-populated with Member Responsibilities and Quality Improvement. Update heading text and hrefs per page.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'membership', 'navigation', 'related', 'also see', 'cards', 'links' ],
+			'content'     => fpan_pattern_content( 'membership-nav-cards' ),
+		]
+	);
 }
 add_action( 'init', 'fpan_register_block_patterns', 9 );
