@@ -187,6 +187,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
+ * Provider Directory — CPT, taxonomies, meta.
+ */
+require get_template_directory() . '/inc/provider-directory.php';
+
+/**
  * Load block CSS/JS per-block rather than bundled.
  * Required so the Navigation block's view script (hamburger JS) loads in FSE.
  */

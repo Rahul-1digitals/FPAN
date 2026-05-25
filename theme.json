@@ -465,6 +465,16 @@
       "name": "page-contact",
       "title": "Contact / Join",
       "postTypes": [ "page" ]
+    },
+    {
+      "name": "page-provider-directory",
+      "title": "Provider Directory",
+      "postTypes": [ "page" ]
+    },
+    {
+      "name": "single-provider",
+      "title": "Single Provider Profile",
+      "postTypes": [ "provider" ]
     }
   ],
 

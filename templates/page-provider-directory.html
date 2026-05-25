@@ -1,0 +1,57 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"site-main provider-directory-page","layout":{"type":"default"}} -->
+<main class="wp-block-group site-main provider-directory-page">
+
+
+	<!-- =================================================================
+	     SECTION 1: HERO
+	     Editor can update eyebrow, heading, and description freely.
+	     Background color is set via the navy class — do not remove.
+	     ================================================================= -->
+	<!-- wp:group {"align":"full","backgroundColor":"navy","className":"provider-directory-hero","style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull provider-directory-hero has-navy-background-color has-background" style="padding-top:var(--wp--preset--spacing--3xl);padding-bottom:var(--wp--preset--spacing--3xl)">
+
+		<!-- wp:group {"className":"provider-directory-hero__content","layout":{"type":"constrained","contentSize":"720px"}} -->
+		<div class="wp-block-group provider-directory-hero__content">
+
+			<!-- wp:paragraph {"className":"provider-directory-hero__eyebrow","textColor":"teal-light","fontSize":"sm"} -->
+			<p class="provider-directory-hero__eyebrow has-teal-light-color has-text-color has-sm-font-size">Find a Provider</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:heading {"level":1,"textColor":"white","fontSize":"4xl","className":"provider-directory-hero__heading"} -->
+			<h1 class="wp-block-heading provider-directory-hero__heading has-white-color has-text-color has-4-xl-font-size">Provider Directory</h1>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"textColor":"white","className":"provider-directory-hero__description"} -->
+			<p class="provider-directory-hero__description has-white-color has-text-color">Search our network of pediatric specialists and primary care providers across Florida. Use the filters to find a provider by specialty or location.</p>
+			<!-- /wp:paragraph -->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+
+	<!-- =================================================================
+	     SECTION 2: DIRECTORY
+	     This section is rendered by PHP via the shortcode.
+	     The shortcode handles: search bar, filters, cards, pagination.
+	     Do not replace this with a Query Loop block.
+	     ================================================================= -->
+	<!-- wp:group {"align":"full","backgroundColor":"bg","className":"provider-directory-body","style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|4xl"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull provider-directory-body has-bg-background-color has-background" style="padding-top:var(--wp--preset--spacing--3xl);padding-bottom:var(--wp--preset--spacing--4xl)">
+
+		<!-- wp:shortcode -->
+		[fpan_provider_directory]
+		<!-- /wp:shortcode -->
+
+	</div>
+	<!-- /wp:group -->
+
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
