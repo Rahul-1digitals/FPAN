@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "fpan/clinic-section",
+  "version": "1.0.0",
+  "title": "Clinic Section",
+  "category": "fpan-healthcare",
+  "icon": "list-view",
+  "description": "A specialty clinic section with configurable Jump To navigation support.",
+  "textdomain": "fpan-theme",
+  "attributes": {
+    "anchorId": {
+      "type": "string",
+      "default": ""
+    },
+    "includeInNav": {
+      "type": "boolean",
+      "default": true
+    },
+    "navOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  },
+  "supports": {
+    "html": false,
+    "className": false,
+    "anchor": false,
+    "inserter": true,
+    "multiple": true
+  }
+}

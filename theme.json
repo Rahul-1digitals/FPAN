@@ -475,6 +475,16 @@
       "name": "single-provider",
       "title": "Single Provider Profile",
       "postTypes": [ "provider" ]
+    },
+    {
+      "name": "page-specialty-clinics",
+      "title": "Specialty Care Clinics",
+      "postTypes": [ "page" ]
+    },
+    {
+      "name": "page-primary-clinics",
+      "title": "Primary Care Clinics",
+      "postTypes": [ "page" ]
     }
   ],
 

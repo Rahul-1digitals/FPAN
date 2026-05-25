@@ -537,6 +537,32 @@ function fpan_provider_directory_shortcode() {
 					<?php endif; ?>
 
 				</div>
+
+				<?php
+				$specialty_page = get_page_by_path( 'specialty-care-clinics' );
+				$primary_page   = get_page_by_path( 'primary-care-clinics' );
+				$specialty_url  = $specialty_page ? get_permalink( $specialty_page->ID ) : home_url( '/specialty-care-clinics/' );
+				$primary_url    = $primary_page   ? get_permalink( $primary_page->ID )   : home_url( '/primary-care-clinics/' );
+				?>
+				<div class="clinic-nav-widget">
+					<a href="<?php echo esc_url( $specialty_url ); ?>" class="clinic-nav-widget__link">
+						<span><?php esc_html_e( 'Browse our specialty care clinics', 'fpan-theme' ); ?></span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+							 fill="none" stroke="currentColor" stroke-width="2.5"
+							 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<polyline points="9 18 15 12 9 6"/>
+						</svg>
+					</a>
+					<a href="<?php echo esc_url( $primary_url ); ?>" class="clinic-nav-widget__link">
+						<span><?php esc_html_e( 'Browse our primary care clinics', 'fpan-theme' ); ?></span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+							 fill="none" stroke="currentColor" stroke-width="2.5"
+							 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<polyline points="9 18 15 12 9 6"/>
+						</svg>
+					</a>
+				</div>
+
 			</aside><!-- /.provider-directory__sidebar -->
 
 

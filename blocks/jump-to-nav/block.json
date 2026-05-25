@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "fpan/jump-to-nav",
+  "version": "1.0.0",
+  "title": "Jump To Navigation",
+  "category": "fpan-healthcare",
+  "icon": "menu",
+  "description": "Auto-generates a sticky Jump To navigation bar from all Clinic Section blocks on the page. Place once at the top of the page content.",
+  "textdomain": "fpan-theme",
+  "attributes": {},
+  "supports": {
+    "html": false,
+    "className": false,
+    "anchor": false,
+    "inserter": true,
+    "multiple": false
+  }
+}

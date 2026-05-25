@@ -192,6 +192,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require get_template_directory() . '/inc/provider-directory.php';
 
 /**
+ * Specialty & Primary Care Clinic Blocks.
+ */
+require get_template_directory() . '/inc/specialty-clinics-blocks.php';
+
+/**
  * Load block CSS/JS per-block rather than bundled.
  * Required so the Navigation block's view script (hamburger JS) loads in FSE.
  */
