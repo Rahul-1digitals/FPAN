@@ -323,5 +323,77 @@ function fpan_register_block_patterns() {
 			'content'     => fpan_pattern_content( 'membership-nav-cards' ),
 		]
 	);
+
+	// ── Clinical Resources: Jump Navigation ───────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/clinical-resources-jump-nav',
+		[
+			'title'       => __( 'Clinical Resources Jump Navigation', 'fpan-theme' ),
+			'description' => __( 'Horizontal anchor-link navigation bar for jumping to Clinical Resources Hub sections. No JavaScript required.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'clinical', 'resources', 'jump nav', 'anchor', 'navigation', 'hub' ],
+			'content'     => fpan_pattern_content( 'clinical-resources-jump-nav' ),
+		]
+	);
+
+	// ── Clinical Resources: Audience Section ──────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/clinical-audience-section',
+		[
+			'title'       => __( 'Clinical Audience Resource Section', 'fpan-theme' ),
+			'description' => __( 'A resource card grid for a specific provider audience. Pre-populated for Physicians. Insert once per audience; update heading and set anchor ID in Advanced tab.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'clinical', 'resources', 'audience', 'physicians', 'APPs', 'clinic staff', 'cards' ],
+			'content'     => fpan_pattern_content( 'clinical-audience-section' ),
+		]
+	);
+
+	// ── Clinical Resources: Education Section ─────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/clinical-education-section',
+		[
+			'title'       => __( 'Asthma & Diabetes Education', 'fpan-theme' ),
+			'description' => __( 'Two-card education highlight section for Asthma and Diabetes resources. Includes a downloadable materials list for each condition.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'clinical', 'asthma', 'diabetes', 'education', 'patient', 'materials', 'downloads' ],
+			'content'     => fpan_pattern_content( 'clinical-education-section' ),
+		]
+	);
+
+	// ── Clinical Resources: Video Grid ────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/clinical-video-grid',
+		[
+			'title'       => __( 'Clinical Video Grid', 'fpan-theme' ),
+			'description' => __( 'Two-column Vimeo embed section for clinical training and educational videos. Replace placeholder URLs with real Vimeo video IDs.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'clinical', 'video', 'vimeo', 'training', 'education', 'embed', 'media' ],
+			'content'     => fpan_pattern_content( 'clinical-video-grid' ),
+		]
+	);
+
+	// ── Clinical Resources: Download Library ──────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/clinical-download-list',
+		[
+			'title'       => __( 'Clinical Download Library', 'fpan-theme' ),
+			'description' => __( 'Three-column grid of downloadable resource cards for PDFs, forms, guidelines, and toolkits. Duplicate any card to add more resources.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'clinical', 'downloads', 'PDF', 'forms', 'guidelines', 'toolkit', 'documents' ],
+			'content'     => fpan_pattern_content( 'clinical-download-list' ),
+		]
+	);
+
+	// ── Clinical Resources: Member Portal CTA ─────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/clinical-portal-cta',
+		[
+			'title'       => __( 'Member Portal CTA', 'fpan-theme' ),
+			'description' => __( 'Strong CTA banner for accessing the FPAN Member Portal. Update the portal button href with the actual login URL.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare', 'banner' ],
+			'keywords'    => [ 'clinical', 'portal', 'member', 'login', 'access', 'cta', 'fpan' ],
+			'content'     => fpan_pattern_content( 'clinical-portal-cta' ),
+		]
+	);
 }
 add_action( 'init', 'fpan_register_block_patterns', 9 );
