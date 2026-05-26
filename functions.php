@@ -197,6 +197,38 @@ require get_template_directory() . '/inc/provider-directory.php';
 require get_template_directory() . '/inc/specialty-clinics-blocks.php';
 
 /**
+ * Enqueue homepage-only scripts: animated hero search + scroll animations.
+ */
+function fpan_homepage_scripts() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+	wp_enqueue_script(
+		'fpan-home-hero-search',
+		get_template_directory_uri() . '/assets/js/home-hero-search.js',
+		[],
+		filemtime( get_template_directory() . '/assets/js/home-hero-search.js' ),
+		true
+	);
+	wp_localize_script(
+		'fpan-home-hero-search',
+		'fpanHomeSearch',
+		[
+			'restUrl'      => rest_url( 'wp/v2/providers' ),
+			'directoryUrl' => home_url( '/provider-directory/' ),
+		]
+	);
+	wp_enqueue_script(
+		'fpan-home-animations',
+		get_template_directory_uri() . '/assets/js/home-animations.js',
+		[],
+		filemtime( get_template_directory() . '/assets/js/home-animations.js' ),
+		true
+	);
+}
+add_action( 'wp_enqueue_scripts', 'fpan_homepage_scripts' );
+
+/**
  * Load block CSS/JS per-block rather than bundled.
  * Required so the Navigation block's view script (hamburger JS) loads in FSE.
  */

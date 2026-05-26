@@ -395,5 +395,77 @@ function fpan_register_block_patterns() {
 			'content'     => fpan_pattern_content( 'clinical-portal-cta' ),
 		]
 	);
+
+	// ── Homepage: Quick Access Tiles ───────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/home-quick-access',
+		[
+			'title'       => __( 'Homepage Quick Access Tiles', 'fpan-theme' ),
+			'description' => __( 'Six whole-card icon tiles linking to the most-visited sections: Provider Directory, Member Portal, Clinical Resources, Membership, For Patients, Contact.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'homepage', 'quick access', 'tiles', 'navigation', 'links' ],
+			'content'     => fpan_pattern_content( 'home-quick-access' ),
+		]
+	);
+
+	// ── Homepage: Stats Section ────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/home-stats',
+		[
+			'title'       => __( 'Homepage Stats Banner', 'fpan-theme' ),
+			'description' => __( 'Full-width navy gradient banner with four key network statistics: 5,000+ Providers, 500K+ Patients, 67 Counties, 20+ Years. Update numbers as needed.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare', 'banner' ],
+			'keywords'    => [ 'homepage', 'stats', 'statistics', 'numbers', 'network', 'impact' ],
+			'content'     => fpan_pattern_content( 'home-stats' ),
+		]
+	);
+
+	// ── Homepage: Audience Routing Cards ──────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/home-audience-routing',
+		[
+			'title'       => __( 'Homepage Audience Routing Cards', 'fpan-theme' ),
+			'description' => __( 'Four whole-card audience routing cards: Patients & Families, Physicians & Providers, Clinics & Practices, Health Plan Partners.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'homepage', 'audience', 'routing', 'cards', 'who we serve' ],
+			'content'     => fpan_pattern_content( 'home-audience-routing' ),
+		]
+	);
+
+	// ── Homepage: News Strip ───────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/home-news-strip',
+		[
+			'title'       => __( 'Homepage News Strip', 'fpan-theme' ),
+			'description' => __( 'Three-column dynamic news card grid using wp:query to pull the three latest posts. Section header with View All link.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'homepage', 'news', 'latest posts', 'query', 'blog', 'updates' ],
+			'content'     => fpan_pattern_content( 'home-news-strip' ),
+		]
+	);
+
+	// ── Homepage: Featured Resources ───────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/home-resources-strip',
+		[
+			'title'       => __( 'Homepage Featured Resources', 'fpan-theme' ),
+			'description' => __( 'Three static featured resource cards: Clinical Resources Hub, Membership Benefits, ACO REACH Program. Update hrefs and descriptions as needed.', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare' ],
+			'keywords'    => [ 'homepage', 'resources', 'featured', 'cards', 'clinical', 'membership' ],
+			'content'     => fpan_pattern_content( 'home-resources-strip' ),
+		]
+	);
+
+	// ── Homepage: Bottom CTA ───────────────────────────────────────────────────
+	register_block_pattern(
+		'fpan-theme/home-bottom-cta',
+		[
+			'title'       => __( 'Homepage Bottom CTA', 'fpan-theme' ),
+			'description' => __( 'Navy gradient full-width call-to-action banner for joining the FPAN network. Features two buttons: primary (Join the Network) and secondary outline (Learn About FPAN).', 'fpan-theme' ),
+			'categories'  => [ 'fpan-healthcare', 'banner' ],
+			'keywords'    => [ 'homepage', 'cta', 'join', 'network', 'bottom', 'banner' ],
+			'content'     => fpan_pattern_content( 'home-bottom-cta' ),
+		]
+	);
 }
 add_action( 'init', 'fpan_register_block_patterns', 9 );
