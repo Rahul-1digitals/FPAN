@@ -86,37 +86,134 @@
 
 
 <!-- ── QUICK ACCESS ───────────────────────────────────────────── -->
-<!-- wp:group {"align":"full","className":"home-quick-access","style":{"spacing":{"padding":{"top":"var:preset|spacing|2xl","bottom":"var:preset|spacing|2xl"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull home-quick-access is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--2-xl);padding-bottom:var(--wp--preset--spacing--2-xl)">
+<!-- wp:group {"align":"full","className":"home-quick-access","style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull home-quick-access is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--3-xl);padding-bottom:var(--wp--preset--spacing--3-xl)">
 
+<!-- wp:paragraph {"textAlign":"center","textColor":"teal","className":"home-qa__eyebrow"} -->
+<p class="home-qa__eyebrow has-teal-color has-text-color has-text-align-center">Quick Access</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"textAlign":"center","level":2,"textColor":"navy","className":"home-qa__heading"} -->
+<h2 class="wp-block-heading home-qa__heading has-navy-color has-text-color has-text-align-center">Everything You Need, In One Place</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textAlign":"center","className":"home-qa__intro"} -->
+<p class="home-qa__intro has-text-align-center">Access provider tools, patient resources, clinical education, and member services — all from one central hub.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"home-quick-access__grid"} -->
+<div class="wp-block-group home-quick-access__grid">
+
+<!-- wp:group {"className":"home-qa-card"} -->
+<div class="wp-block-group home-qa-card">
 <!-- wp:html -->
-<div class="home-quick-access__grid" data-animate>
-  <a class="home-quick-access-tile" href="/provider-directory/">
-    <span class="home-quick-access-tile__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-    <span class="home-quick-access-tile__label">Find a Provider</span>
-  </a>
-  <a class="home-quick-access-tile" href="#">
-    <span class="home-quick-access-tile__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
-    <span class="home-quick-access-tile__label">Member Portal</span>
-  </a>
-  <a class="home-quick-access-tile" href="/clinical-resources/">
-    <span class="home-quick-access-tile__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
-    <span class="home-quick-access-tile__label">Clinical Resources</span>
-  </a>
-  <a class="home-quick-access-tile" href="/membership/">
-    <span class="home-quick-access-tile__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-    <span class="home-quick-access-tile__label">Membership</span>
-  </a>
-  <a class="home-quick-access-tile" href="/for-patients/">
-    <span class="home-quick-access-tile__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-    <span class="home-quick-access-tile__label">For Patients</span>
-  </a>
-  <a class="home-quick-access-tile" href="/contact/">
-    <span class="home-quick-access-tile__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-    <span class="home-quick-access-tile__label">Contact Us</span>
-  </a>
-</div>
+<span class="home-qa-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
 <!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-qa-card__label"} -->
+<p class="home-qa-card__label">Find a Provider</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-qa-card__link-btn"} -->
+<div class="wp-block-button home-qa-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/provider-directory/">Find a Provider</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"home-qa-card"} -->
+<div class="wp-block-group home-qa-card">
+<!-- wp:html -->
+<span class="home-qa-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-qa-card__label"} -->
+<p class="home-qa-card__label">Member Portal</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-qa-card__link-btn"} -->
+<div class="wp-block-button home-qa-card__link-btn"><a class="wp-block-button__link wp-element-button" href="#">Member Portal</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"home-qa-card"} -->
+<div class="wp-block-group home-qa-card">
+<!-- wp:html -->
+<span class="home-qa-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-qa-card__label"} -->
+<p class="home-qa-card__label">Clinical Resources</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-qa-card__link-btn"} -->
+<div class="wp-block-button home-qa-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/clinical-resources/">Clinical Resources</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"home-qa-card"} -->
+<div class="wp-block-group home-qa-card">
+<!-- wp:html -->
+<span class="home-qa-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-qa-card__label"} -->
+<p class="home-qa-card__label">Membership</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-qa-card__link-btn"} -->
+<div class="wp-block-button home-qa-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/membership/">Membership</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"home-qa-card"} -->
+<div class="wp-block-group home-qa-card">
+<!-- wp:html -->
+<span class="home-qa-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-qa-card__label"} -->
+<p class="home-qa-card__label">For Patients</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-qa-card__link-btn"} -->
+<div class="wp-block-button home-qa-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/for-patients/">For Patients</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"home-qa-card"} -->
+<div class="wp-block-group home-qa-card">
+<!-- wp:html -->
+<span class="home-qa-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-qa-card__label"} -->
+<p class="home-qa-card__label">Contact Us</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-qa-card__link-btn"} -->
+<div class="wp-block-button home-qa-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/contact/">Contact Us</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+
+</div>
+<!-- /wp:group -->
 
 </div>
 <!-- /wp:group -->
@@ -126,71 +223,181 @@
 <!-- wp:group {"align":"full","className":"home-stats","style":{"spacing":{"padding":{"top":"var:preset|spacing|2xl","bottom":"var:preset|spacing|2xl"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull home-stats is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--2-xl);padding-bottom:var(--wp--preset--spacing--2-xl)">
 
-<!-- wp:html -->
-<div class="home-stats__grid" data-animate>
-  <div class="home-stat-item">
-    <span class="home-stat-item__number">5,000+</span>
-    <span class="home-stat-item__label">Network Providers</span>
-  </div>
-  <div class="home-stat-item">
-    <span class="home-stat-item__number">500K+</span>
-    <span class="home-stat-item__label">Patients Served</span>
-  </div>
-  <div class="home-stat-item">
-    <span class="home-stat-item__number">67</span>
-    <span class="home-stat-item__label">Florida Counties</span>
-  </div>
-  <div class="home-stat-item">
-    <span class="home-stat-item__number">20+</span>
-    <span class="home-stat-item__label">Years of Excellence</span>
-  </div>
+<!-- wp:columns {"className":"home-stats-grid"} -->
+<div class="wp-block-columns home-stats-grid">
+
+<!-- wp:column {"className":"home-stat-col"} -->
+<div class="wp-block-column home-stat-col">
+<!-- wp:heading {"level":3,"textColor":"teal","className":"home-stat__number"} -->
+<h3 class="wp-block-heading home-stat__number has-teal-color has-text-color">5,000+</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"home-stat__label"} -->
+<p class="home-stat__label">Network Providers</p>
+<!-- /wp:paragraph -->
 </div>
-<!-- /wp:html -->
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"home-stat-col"} -->
+<div class="wp-block-column home-stat-col">
+<!-- wp:heading {"level":3,"textColor":"teal","className":"home-stat__number"} -->
+<h3 class="wp-block-heading home-stat__number has-teal-color has-text-color">500K+</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"home-stat__label"} -->
+<p class="home-stat__label">Patients Served</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"home-stat-col"} -->
+<div class="wp-block-column home-stat-col">
+<!-- wp:heading {"level":3,"textColor":"teal","className":"home-stat__number"} -->
+<h3 class="wp-block-heading home-stat__number has-teal-color has-text-color">67</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"home-stat__label"} -->
+<p class="home-stat__label">Florida Counties</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"home-stat-col"} -->
+<div class="wp-block-column home-stat-col">
+<!-- wp:heading {"level":3,"textColor":"teal","className":"home-stat__number"} -->
+<h3 class="wp-block-heading home-stat__number has-teal-color has-text-color">20+</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"home-stat__label"} -->
+<p class="home-stat__label">Years of Excellence</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
 
 </div>
 <!-- /wp:group -->
 
 
 <!-- ── AUDIENCE ROUTING ───────────────────────────────────────── -->
-<!-- wp:group {"align":"full","className":"home-audience-routing","style":{"spacing":{"padding":{"top":"var:preset|spacing|2xl","bottom":"var:preset|spacing|2xl"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull home-audience-routing is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--2-xl);padding-bottom:var(--wp--preset--spacing--2-xl)">
+<!-- wp:group {"align":"full","className":"home-audience-routing","style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull home-audience-routing is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--3-xl);padding-bottom:var(--wp--preset--spacing--3-xl)">
 
-<!-- wp:paragraph {"textColor":"teal","className":"home-section__eyebrow"} -->
-<p class="home-section__eyebrow has-teal-color has-text-color">Who We Serve</p>
+<!-- wp:paragraph {"textAlign":"center","textColor":"teal","className":"home-section__eyebrow"} -->
+<p class="home-section__eyebrow has-teal-color has-text-color has-text-align-center">Who We Serve</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":2,"textColor":"navy","className":"home-section__heading"} -->
-<h2 class="wp-block-heading home-section__heading has-navy-color has-text-color">Resources for Every Role</h2>
+<!-- wp:heading {"textAlign":"center","level":2,"textColor":"navy","className":"home-section__heading"} -->
+<h2 class="wp-block-heading home-section__heading has-navy-color has-text-color has-text-align-center">Resources for Every Role</h2>
 <!-- /wp:heading -->
 
+<!-- wp:paragraph {"textAlign":"center","className":"home-section__intro"} -->
+<p class="home-section__intro has-text-align-center">Whether you&#8217;re a patient, provider, clinic, or partner — FPAN has the right resources for your role in the network.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns {"className":"home-audience-cards"} -->
+<div class="wp-block-columns home-audience-cards">
+
+<!-- wp:column {"className":"home-audience-col"} -->
+<div class="wp-block-column home-audience-col">
+<!-- wp:group {"className":"home-audience-card"} -->
+<div class="wp-block-group home-audience-card">
 <!-- wp:html -->
-<div class="home-audience-cards" data-animate>
-  <a class="home-audience-card" href="/for-patients/">
-    <span class="home-audience-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-    <span class="home-audience-card__title">Patients &amp; Families</span>
-    <span class="home-audience-card__desc">Find a provider, understand your care options, and access patient health resources.</span>
-    <span class="home-audience-card__link">Patient Resources &rarr;</span>
-  </a>
-  <a class="home-audience-card" href="/clinical-resources/">
-    <span class="home-audience-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
-    <span class="home-audience-card__title">Physicians &amp; Providers</span>
-    <span class="home-audience-card__desc">Clinical tools, quality reporting, network benefits, and continuing education resources.</span>
-    <span class="home-audience-card__link">Clinical Resources &rarr;</span>
-  </a>
-  <a class="home-audience-card" href="/membership/">
-    <span class="home-audience-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
-    <span class="home-audience-card__title">Clinics &amp; Practices</span>
-    <span class="home-audience-card__desc">Practice support, data analytics, operational resources, and membership benefits.</span>
-    <span class="home-audience-card__link">Membership &rarr;</span>
-  </a>
-  <a class="home-audience-card" href="/contact/">
-    <span class="home-audience-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-    <span class="home-audience-card__title">Health Plan Partners</span>
-    <span class="home-audience-card__desc">Explore value-based care contracts, shared savings models, and network performance data.</span>
-    <span class="home-audience-card__link">Partner Information &rarr;</span>
-  </a>
-</div>
+<span class="home-audience-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
 <!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-audience-card__title"} -->
+<p class="home-audience-card__title">Patients &amp; Families</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"home-audience-card__desc"} -->
+<p class="home-audience-card__desc">Find a provider, understand your care options, and access patient health resources.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-audience-card__link-btn"} -->
+<div class="wp-block-button home-audience-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/for-patients/">Patient Resources</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"home-audience-col"} -->
+<div class="wp-block-column home-audience-col">
+<!-- wp:group {"className":"home-audience-card"} -->
+<div class="wp-block-group home-audience-card">
+<!-- wp:html -->
+<span class="home-audience-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-audience-card__title"} -->
+<p class="home-audience-card__title">Physicians &amp; Providers</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"home-audience-card__desc"} -->
+<p class="home-audience-card__desc">Clinical tools, quality reporting, network benefits, and continuing education resources.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-audience-card__link-btn"} -->
+<div class="wp-block-button home-audience-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/clinical-resources/">Clinical Resources</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"home-audience-col"} -->
+<div class="wp-block-column home-audience-col">
+<!-- wp:group {"className":"home-audience-card"} -->
+<div class="wp-block-group home-audience-card">
+<!-- wp:html -->
+<span class="home-audience-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-audience-card__title"} -->
+<p class="home-audience-card__title">Clinics &amp; Practices</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"home-audience-card__desc"} -->
+<p class="home-audience-card__desc">Practice support, data analytics, operational resources, and membership benefits.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-audience-card__link-btn"} -->
+<div class="wp-block-button home-audience-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/membership/">Membership</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"home-audience-col"} -->
+<div class="wp-block-column home-audience-col">
+<!-- wp:group {"className":"home-audience-card"} -->
+<div class="wp-block-group home-audience-card">
+<!-- wp:html -->
+<span class="home-audience-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-audience-card__title"} -->
+<p class="home-audience-card__title">Health Plan Partners</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"home-audience-card__desc"} -->
+<p class="home-audience-card__desc">Explore value-based care contracts, shared savings models, and network performance data.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-audience-card__link-btn"} -->
+<div class="wp-block-button home-audience-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/contact/">Partner Information</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
 
 </div>
 <!-- /wp:group -->
@@ -250,39 +457,107 @@
 <!-- wp:group {"align":"full","className":"home-resources-strip","style":{"spacing":{"padding":{"top":"var:preset|spacing|2xl","bottom":"var:preset|spacing|2xl"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull home-resources-strip is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--2-xl);padding-bottom:var(--wp--preset--spacing--2-xl)">
 
-<!-- wp:paragraph {"textColor":"teal","className":"home-section__eyebrow"} -->
-<p class="home-section__eyebrow has-teal-color has-text-color">Resources</p>
+<!-- wp:paragraph {"textAlign":"center","textColor":"teal","className":"home-section__eyebrow"} -->
+<p class="home-section__eyebrow has-teal-color has-text-color has-text-align-center">Resources</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":2,"textColor":"navy","className":"home-section__heading"} -->
-<h2 class="wp-block-heading home-section__heading has-navy-color has-text-color">Key Resources for Our Network</h2>
+<!-- wp:heading {"textAlign":"center","level":2,"textColor":"navy","className":"home-section__heading"} -->
+<h2 class="wp-block-heading home-section__heading has-navy-color has-text-color has-text-align-center">Key Resources for Our Network</h2>
 <!-- /wp:heading -->
 
+<!-- wp:paragraph {"textAlign":"center","className":"home-section__intro"} -->
+<p class="home-section__intro has-text-align-center">Essential tools and information for every member of the FPAN network &#8212; providers, clinics, and partners.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns {"className":"home-resource-cards"} -->
+<div class="wp-block-columns home-resource-cards">
+
+<!-- wp:column {"className":"home-resource-col"} -->
+<div class="wp-block-column home-resource-col">
+<!-- wp:group {"className":"home-resource-card"} -->
+<div class="wp-block-group home-resource-card">
 <!-- wp:html -->
-<div class="home-resource-cards" data-animate>
-  <a class="home-resource-card" href="/clinical-resources/">
-    <span class="home-resource-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
-    <span class="home-resource-card__cat">For Providers</span>
-    <span class="home-resource-card__title">Clinical Resources Hub</span>
-    <span class="home-resource-card__desc">Guidelines, education materials, training videos, and downloadable forms for FPAN network providers.</span>
-    <span class="home-resource-card__link">Access Resources &rarr;</span>
-  </a>
-  <a class="home-resource-card" href="/membership/">
-    <span class="home-resource-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-    <span class="home-resource-card__cat">Network</span>
-    <span class="home-resource-card__title">Membership Benefits</span>
-    <span class="home-resource-card__desc">Discover the clinical, financial, and operational benefits of joining the FPAN network.</span>
-    <span class="home-resource-card__link">Learn More &rarr;</span>
-  </a>
-  <a class="home-resource-card" href="/aco-reach/">
-    <span class="home-resource-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
-    <span class="home-resource-card__cat">Compliance</span>
-    <span class="home-resource-card__title">ACO REACH Program</span>
-    <span class="home-resource-card__desc">Learn about FPAN&#8217;s Accountable Care Organization participation, metrics, and provider information.</span>
-    <span class="home-resource-card__link">View ACO REACH &rarr;</span>
-  </a>
-</div>
+<span class="home-resource-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
 <!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-resource-card__cat"} -->
+<p class="home-resource-card__cat">For Providers</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3,"textColor":"navy","className":"home-resource-card__title"} -->
+<h3 class="wp-block-heading home-resource-card__title has-navy-color has-text-color">Clinical Resources Hub</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"home-resource-card__desc"} -->
+<p class="home-resource-card__desc">Guidelines, education materials, training videos, and downloadable forms for FPAN network providers.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-resource-card__link-btn"} -->
+<div class="wp-block-button home-resource-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/clinical-resources/">Access Resources</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"home-resource-col"} -->
+<div class="wp-block-column home-resource-col">
+<!-- wp:group {"className":"home-resource-card"} -->
+<div class="wp-block-group home-resource-card">
+<!-- wp:html -->
+<span class="home-resource-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-resource-card__cat"} -->
+<p class="home-resource-card__cat">Network</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3,"textColor":"navy","className":"home-resource-card__title"} -->
+<h3 class="wp-block-heading home-resource-card__title has-navy-color has-text-color">Membership Benefits</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"home-resource-card__desc"} -->
+<p class="home-resource-card__desc">Discover the clinical, financial, and operational benefits of joining the FPAN network.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-resource-card__link-btn"} -->
+<div class="wp-block-button home-resource-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/membership/">Learn More</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"home-resource-col"} -->
+<div class="wp-block-column home-resource-col">
+<!-- wp:group {"className":"home-resource-card"} -->
+<div class="wp-block-group home-resource-card">
+<!-- wp:html -->
+<span class="home-resource-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
+<!-- /wp:html -->
+<!-- wp:paragraph {"className":"home-resource-card__cat"} -->
+<p class="home-resource-card__cat">Compliance</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3,"textColor":"navy","className":"home-resource-card__title"} -->
+<h3 class="wp-block-heading home-resource-card__title has-navy-color has-text-color">ACO REACH Program</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"home-resource-card__desc"} -->
+<p class="home-resource-card__desc">Learn about FPAN&#8217;s Accountable Care Organization participation, metrics, and provider information.</p>
+<!-- /wp:paragraph -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"home-resource-card__link-btn"} -->
+<div class="wp-block-button home-resource-card__link-btn"><a class="wp-block-button__link wp-element-button" href="/aco-reach/">View ACO REACH</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
 
 </div>
 <!-- /wp:group -->

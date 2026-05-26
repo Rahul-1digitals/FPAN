@@ -1,8 +1,16 @@
 (function () {
     'use strict';
 
+    var SELECTORS = [
+        '[data-animate]',
+        '.home-quick-access__grid',
+        '.home-stats-grid',
+        '.home-audience-cards',
+        '.home-resource-cards'
+    ].join(', ');
+
     if (!('IntersectionObserver' in window)) {
-        document.querySelectorAll('[data-animate]').forEach(function (el) {
+        document.querySelectorAll(SELECTORS).forEach(function (el) {
             el.classList.add('is-visible');
         });
         return;
@@ -16,7 +24,7 @@
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    document.querySelectorAll('[data-animate]').forEach(function (el) {
+    document.querySelectorAll(SELECTORS).forEach(function (el) {
         observer.observe(el);
     });
 }());
