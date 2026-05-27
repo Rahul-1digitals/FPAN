@@ -489,357 +489,186 @@ pre {
    8. SITE HEADER
    ============================================================================= */
 
-/* Sticky bar — sits above all content */
+:root {
+  --header-brand-h: 64px;
+  --header-nav-h:   46px;
+  --header-pad:     var(--wp--preset--spacing--lg, 1.5rem);
+}
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08), 0 4px 24px rgba(0,0,0,0.07);
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
 }
 
-/* Three-column flex row: brand | nav | actions */
-.header__inner {
+/* ---- Row 1: Brand bar (logo + desktop CTA) ---- */
+.site-header .header__brand-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-4);
-  min-height: 4rem;        /* 64px — consistent bar height */
-  padding-block: var(--space-3);
-}
-
-/* --- Brand --- */
-.header__brand {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  max-width: 220px;        /* cap brand area so it never crowds the nav */
-}
-
-/* WordPress wraps the logo in <a class="custom-logo-link"> — make it block */
-.header__brand .custom-logo-link {
-  display: flex;
-  align-items: center;
-  line-height: 0;          /* kills the inline baseline gap below the image */
-}
-
-.header__brand .custom-logo {
-  width: 100%;             /* fill the 220px brand area */
-  height: auto;            /* preserve aspect ratio */
-  max-height: 6.5rem;      /* prevent a tall logo from blowing out the header height */
-  object-fit: contain;
-}
-
-.header__site-title {
-  font-size: var(--text-lg);
-  font-weight: var(--font-bold);
-  color: var(--color-navy);
-  line-height: 1;
-}
-
-.header__site-title a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* --- Primary Nav — hidden on mobile, visible on desktop --- */
-.header__nav {
-  display: none;           /* hidden until ≥ 1024px */
-}
-
-.header__nav .nav__list {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 0;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* li is the flex item — lock it to its content width, prevent shrink */
-.header__nav .nav__list li {
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-
-.header__nav .nav__list li a {
-  display: block;
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  color: var(--color-text);
-  border-radius: var(--radius-sm);
-  white-space: nowrap;
-  transition: color var(--transition-fast), background-color var(--transition-fast);
-}
-
-.header__nav .nav__list li a:hover,
-.header__nav .nav__list li.current-menu-item > a {
-  color: var(--color-teal);
-  background-color: var(--color-bg);
-}
-
-.header__nav .nav__list li a:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 2px;
-}
-
-/* --- Actions area --- */
-.header__actions {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  flex-shrink: 0;
-}
-
-/* CTA button — use btn classes from section 5 */
-.header__cta {
-  padding: var(--space-2) var(--space-5);
-  font-size: var(--text-sm);
-}
-
-/* --- Hamburger toggle — visible on mobile only --- */
-.header__toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: var(--space-2);
-  background: none;
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: border-color var(--transition-fast);
-}
-
-.header__toggle:hover {
-  border-color: var(--color-teal);
-}
-
-.header__toggle:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 2px;
-}
-
-.header__toggle-bar {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-navy);
-  border-radius: var(--radius-full);
-  transition: transform var(--transition-base), opacity var(--transition-base);
-}
-
-/* Animate bars into X when menu is open */
-.header__toggle[aria-expanded="true"] .header__toggle-bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.header__toggle[aria-expanded="true"] .header__toggle-bar:nth-child(2) {
-  opacity: 0;
-}
-.header__toggle[aria-expanded="true"] .header__toggle-bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-/* --- Desktop breakpoint — show nav, hide hamburger --- */
-@media (min-width: 1024px) {
-  .header__nav {
-    display: flex;         /* reveal the nav */
-    flex: 1;
-    justify-content: center;
-  }
-
-  .header__toggle {
-    display: none;         /* hide hamburger */
-  }
-}
-
-
-/* =============================================================================
-   9. MOBILE NAV DRAWER (structure only — JS toggles .is-open)
-   ============================================================================= */
-
-/* The nav becomes a full-width drawer below the header on mobile */
-@media (max-width: 1023px) {
-  .header__nav {
-    position: absolute;
-    top: 100%;             /* anchored to bottom edge of .site-header */
-    left: 0;
-    right: 0;
-    background-color: var(--color-white);
-    border-top: 1px solid var(--color-border);
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height var(--transition-base);
-  }
-
-  .header__nav.is-open {
-    display: flex;         /* override display:none */
-    max-height: 80vh;
-    overflow-y: auto;
-  }
-
-  .header__nav .nav__list {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    padding: var(--space-4) var(--space-6);
-    gap: 0;
-  }
-
-  .header__nav .nav__list li a {
-    padding: var(--space-3) 0;
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .header__nav .nav__list li:last-child a {
-    border-bottom: none;
-  }
-}
-
-
-/* =============================================================================
-   9b. FSE HEADER — GUTENBERG BLOCK NAVIGATION
-   Targets classes generated by the WordPress Navigation block.
-   Parts: .wp-block-navigation, .wp-block-navigation-item,
-          .wp-block-navigation-item__content (the <a>),
-          mobile overlay classes.
-   ============================================================================= */
-
-/* ---- Override constrained layout: header uses wide-size (1280px), not content-size (800px) ---- */
-.site-header .header__inner {
+  gap: 1.5rem;
+  height: var(--header-brand-h, 64px);
   max-width: var(--wp--style--global--wide-size, 1280px);
-  padding-inline: var(--wp--preset--spacing--lg, 1.5rem);
+  margin-inline: auto;
+  margin-block: 0 !important;
+  width: 100%;
+  padding-inline: var(--header-pad, 1.5rem);
 }
 
-/* ---- Site Logo block ---- */
+.site-header .header__brand-bar > * {
+  margin-block: 0 !important;
+}
+
+/* ---- Row 2: Nav bar ---- */
+.site-header .header__nav-bar {
+  height: var(--header-nav-h, 46px);
+  max-width: var(--wp--style--global--wide-size, 1280px);
+  margin-inline: auto;
+  margin-block: 0 !important;
+  width: 100%;
+  padding-inline: var(--header-pad, 1.5rem);
+  border-top: 1px solid rgba(0,0,0,0.09);
+  display: flex;
+  align-items: stretch;
+}
+
+.site-header .header__nav-bar > * {
+  margin-block: 0 !important;
+}
+
+/* ---- Site Logo ---- */
 .site-header .wp-block-site-logo {
   flex-shrink: 0;
-  max-width: 220px;
-  line-height: 0;        /* remove baseline gap below the <img> */
+  line-height: 0;
+  margin: 0 !important;
+  transition: opacity 220ms ease;
+}
+
+.site-header .wp-block-site-logo:hover {
+  opacity: 0.82;
+}
+
+.site-header .wp-block-site-logo a {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  text-decoration: none;
 }
 
 .site-header .wp-block-site-logo img {
   display: block;
   height: auto;
-  max-height: 3.5rem;
+  max-height: 3.25rem;
   object-fit: contain;
 }
 
-/* ---- Navigation block wrapper ---- */
-.site-header .wp-block-navigation {
-  font-size: var(--wp--preset--font-size--sm);
-  font-weight: 500;
-  min-width: 0;   /* allows the nav to shrink within the flex row */
+/* ---- Desktop CTA: Member Login button ---- */
+.site-header .header__cta {
+  flex-shrink: 0;
+  margin: 0 !important;
 }
 
-/* ---- Desktop nav list ---- */
+.site-header .header__cta .wp-block-button__link {
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  border-radius: 6px !important;
+  padding: 0.6rem 1.625rem !important;
+  line-height: 1.2 !important;
+  white-space: nowrap;
+  color: #ffffff !important;
+  border-color: var(--wp--preset--color--navy, #0d2b55) !important;
+  box-shadow: 0 1px 3px rgba(13,43,85,0.18), 0 2px 10px rgba(13,43,85,0.12) !important;
+  transition: background-color 200ms ease, box-shadow 200ms ease, transform 200ms ease !important;
+}
+
+.site-header .header__cta .wp-block-button__link:hover {
+  background-color: #1a4080 !important;
+  box-shadow: 0 4px 18px rgba(13,43,85,0.30), 0 2px 6px rgba(13,43,85,0.18) !important;
+  transform: translateY(-1px) !important;
+}
+
+.site-header .header__cta .wp-block-button__link:focus-visible {
+  outline: 3px solid var(--wp--preset--color--teal, #0f7b82);
+  outline-offset: 2px;
+}
+
+/* ---- Navigation block ---- */
+.site-header .wp-block-navigation {
+  position: static !important;
+  min-width: 0;
+  margin: 0 !important;
+  overflow: visible;
+  width: 100%;
+}
+
+.site-header .wp-block-navigation-item.has-child {
+  position: relative;
+}
+
+/* ---- Nav container list ---- */
 .site-header .wp-block-navigation .wp-block-navigation__container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 0;
   list-style: none;
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
 }
 
 /* ---- Each nav item ---- */
 .site-header .wp-block-navigation-item {
   flex-shrink: 0;
   white-space: nowrap;
+  display: flex;
+  align-items: stretch;
 }
 
-/* ---- The clickable link inside each item ---- */
+/* ---- Nav link ---- */
 .site-header .wp-block-navigation-item__content {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  color: var(--wp--preset--color--text);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+  color: var(--wp--preset--color--navy, #0d2b55);
   text-decoration: none;
-  border-radius: var(--wp--preset--spacing--xs, 0.25rem);
-  transition: color 150ms ease, background-color 150ms ease;
+  height: 100%;
+  white-space: nowrap;
+  transition: color 180ms ease;
 }
 
 .site-header .wp-block-navigation-item__content:hover {
-  color: var(--wp--preset--color--teal);
-  background-color: var(--wp--preset--color--bg);
+  color: var(--wp--preset--color--teal, #0f7b82);
 }
 
-/* Active / current page link */
 .site-header .wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content {
-  color: var(--wp--preset--color--teal);
-  font-weight: 600;
+  color: var(--wp--preset--color--teal, #0f7b82);
 }
 
-/* ---- WCAG focus ring ---- */
 .site-header .wp-block-navigation-item__content:focus-visible {
-  outline: 3px solid var(--wp--preset--color--teal);
+  outline: 3px solid var(--wp--preset--color--teal, #0f7b82);
   outline-offset: 2px;
 }
 
-/* ---- Member Login nav item — styled as a teal button (class: nav-login) ---- */
-
-/* Desktop: teal pill button in the nav row */
-.site-header .nav-login > .wp-block-navigation-item__content {
-  background-color: var(--wp--preset--color--teal);
-  color: var(--wp--preset--color--white) !important;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1.25rem;
-  font-weight: 600;
-  white-space: nowrap;
-  margin-left: 0.5rem;
+/* ---- nav-login: hidden on desktop — .header__cta button handles it ---- */
+.site-header .nav-login {
+  display: none;
 }
 
-.site-header .nav-login > .wp-block-navigation-item__content:hover {
-  background-color: var(--wp--preset--color--teal-dark);
-  color: var(--wp--preset--color--white) !important;
-}
-
-.site-header .nav-login > .wp-block-navigation-item__content:focus-visible {
-  outline: 3px solid var(--wp--preset--color--teal-dark);
-  outline-offset: 2px;
-}
-
-/* Mobile overlay: full-width teal button, separated from the link list */
-.site-header .wp-block-navigation__responsive-container.is-menu-open
-.nav-login {
-  margin-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 1rem;
-}
-
-.site-header .wp-block-navigation__responsive-container.is-menu-open
-.nav-login > .wp-block-navigation-item__content {
-  background-color: var(--wp--preset--color--teal);
-  color: var(--wp--preset--color--white) !important;
-  border-radius: 0.5rem;
-  border-bottom: none;
-  text-align: center;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-}
-
-.site-header .wp-block-navigation__responsive-container.is-menu-open
-.nav-login > .wp-block-navigation-item__content:hover {
-  background-color: var(--wp--preset--color--teal-dark);
-}
-
-/* ---- Member Login / CTA button in header flex row ---- */
-.site-header .wp-block-buttons {
-  flex-shrink: 0;        /* never let the buttons wrapper compress */
-}
-
-.site-header .wp-block-button__link {
-  white-space: nowrap;   /* keep label on one line */
-}
-
-/* ---- Hamburger button: always styled, visibility controlled by breakpoint below ---- */
+/* ---- Hamburger button ---- */
 .site-header .wp-block-navigation__responsive-container-open {
   display: flex;
   align-items: center;
@@ -848,77 +677,137 @@ pre {
   height: 2.5rem;
   padding: 0.5rem;
   background: none;
-  border: 2px solid var(--wp--preset--color--border);
-  border-radius: 0.25rem;
-  color: var(--wp--preset--color--navy);
+  border: 1.5px solid var(--wp--preset--color--border, #d1d5db);
+  border-radius: 0.375rem;
+  color: var(--wp--preset--color--navy, #0d2b55);
   cursor: pointer;
-  transition: border-color 150ms ease;
+  transition: border-color 180ms ease, color 180ms ease;
 }
 
 .site-header .wp-block-navigation__responsive-container-open:hover {
-  border-color: var(--wp--preset--color--teal);
+  border-color: var(--wp--preset--color--teal, #0f7b82);
+  color: var(--wp--preset--color--teal, #0f7b82);
 }
 
 .site-header .wp-block-navigation__responsive-container-open:focus-visible {
-  outline: 3px solid var(--wp--preset--color--teal);
+  outline: 3px solid var(--wp--preset--color--teal, #0f7b82);
   outline-offset: 2px;
 }
 
-/* ---- Close button (inside mobile overlay) ---- */
+/* ---- Close button (mobile overlay only) ---- */
 .site-header .wp-block-navigation__responsive-container-close {
-  color: var(--wp--preset--color--white);
+  color: #ffffff;
 }
 
-/* ---- Overlay nav links — styled only when the overlay is open ---- */
+/* ---- Mobile overlay links ---- */
 .site-header .wp-block-navigation__responsive-container.is-menu-open
 .wp-block-navigation-item__content {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1.125rem;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255,255,255,0.85);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding: 0.875rem 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   border-radius: 0;
   text-align: left;
+  text-transform: none;
+  letter-spacing: normal;
   width: 100%;
+  height: auto;
+  position: static;
 }
 
 .site-header .wp-block-navigation__responsive-container.is-menu-open
 .wp-block-navigation-item__content:hover {
-  color: var(--wp--preset--color--teal-light);
-  background-color: transparent;
+  color: var(--wp--preset--color--teal-light, #5bbfc5);
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* ==========================================================================
-   RESPONSIVE BREAKPOINTS
-   ========================================================================== */
+/* ---- nav-login: shown in mobile overlay as teal CTA ---- */
+.site-header .wp-block-navigation__responsive-container.is-menu-open .nav-login {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 1.5rem;
+}
 
-/* ---- Mobile + Tablet (<1270px): logo + hamburger only ---- */
+.site-header .wp-block-navigation__responsive-container.is-menu-open
+.nav-login > .wp-block-navigation-item__content {
+  display: flex;
+  justify-content: center;
+  background: var(--wp--preset--color--teal, #0f7b82);
+  color: #ffffff !important;
+  border-radius: 0.5rem;
+  border-bottom: none;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  height: auto;
+  width: 100%;
+}
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open
+.nav-login > .wp-block-navigation-item__content:hover {
+  background: #0a6068;
+  border-bottom: none;
+}
+
+
+/* =============================================================================
+   9. MOBILE NAV (<1270px)
+   ============================================================================= */
+
 @media (max-width: 1269px) {
-  /* Hide Member Login */
-  .site-header .wp-block-buttons {
+  .site-header .header__brand-bar {
+    height: 60px;
+  }
+
+  .site-header .wp-block-site-logo img {
+    max-height: 2.5rem;
+  }
+
+  .site-header .header__cta {
     display: none;
   }
 
-  /* Responsive container: hidden by default, becomes full-screen overlay when open.
-     The !important overrides WordPress's own .hidden-by-default rule. */
+  .site-header .header__nav-bar {
+    height: 0;
+    border-top: none;
+    overflow: visible;
+    padding-block: 0;
+    max-width: 100%;
+    padding-inline: 0;
+  }
+
+  .site-header .wp-block-navigation__responsive-container-open {
+    position: absolute;
+    top: calc((60px - 2.5rem) / 2);
+    right: var(--header-pad, 1.5rem);
+    z-index: 10;
+  }
+
   .site-header .wp-block-navigation__responsive-container {
     display: none !important;
     position: fixed !important;
     inset: 0;
     z-index: 999;
     overflow-y: auto;
-    background-color: var(--wp--preset--color--navy-dark);
+    background-color: var(--wp--preset--color--navy-dark, #091e38);
   }
 
-  /* Open state: JS adds .is-menu-open when hamburger is clicked */
   .site-header .wp-block-navigation__responsive-container.is-menu-open {
     display: flex !important;
     flex-direction: column;
     padding: 2rem 1.5rem;
-    background-color: var(--wp--preset--color--navy-dark) !important;
+    background-color: var(--wp--preset--color--navy-dark, #091e38) !important;
   }
 
-  /* WordPress generates these intermediate wrapper divs inside the overlay.
-     Without explicit display rules they collapse and hide the nav items. */
   .site-header .wp-block-navigation__responsive-container.is-menu-open
   .wp-block-navigation__responsive-close,
   .site-header .wp-block-navigation__responsive-container.is-menu-open
@@ -929,17 +818,14 @@ pre {
     width: 100%;
   }
 
-  /* Nav list inside overlay: vertical stack, left-aligned */
   .site-header .wp-block-navigation__responsive-container.is-menu-open
   .wp-block-navigation__container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
     width: 100%;
   }
 
-  /* Each nav item fills the full overlay width */
   .site-header .wp-block-navigation__responsive-container.is-menu-open
   .wp-block-navigation-item {
     width: 100%;
@@ -947,16 +833,18 @@ pre {
   }
 }
 
-/* ---- Desktop (≥1270px): nav links in header row, no hamburger ---- */
+
+/* =============================================================================
+   9b. DESKTOP NAV ROW (>=1270px)
+   ============================================================================= */
+
 @media (min-width: 1270px) {
-  /* Hide hamburger */
-  .site-header .wp-block-navigation__responsive-container-open {
-    display: none;
+  .site-header .wp-block-navigation {
+    display: flex !important;
+    align-items: stretch;
+    padding: 0;
   }
 
-  /* Show the responsive container in normal header flow.
-     !important is required to beat WordPress's .hidden-by-default:not(.is-menu-open) rule
-     (specificity 0,3,0) which keeps the container hidden without it. */
   .site-header .wp-block-navigation__responsive-container {
     display: flex !important;
     position: static !important;
@@ -964,13 +852,63 @@ pre {
     padding: 0 !important;
     z-index: auto !important;
     overflow: visible !important;
+    width: 100%;
+    flex: 1;
+    align-items: stretch;
   }
 
-  /* Close button only needed inside the mobile overlay */
+  .site-header .wp-block-navigation__responsive-container-open {
+    display: none;
+  }
+
   .site-header .wp-block-navigation__responsive-container-close {
     display: none;
   }
+
+  .site-header .wp-block-navigation__responsive-close,
+  .site-header .wp-block-navigation__responsive-dialog,
+  .site-header .wp-block-navigation__responsive-container-content {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    flex: 1;
+    overflow: visible;
+  }
+
+  /* Center nav items as a group within the nav bar */
+  .site-header .wp-block-navigation .wp-block-navigation__container {
+    justify-content: center !important;
+  }
+
+  /* Animated slide-in underline on desktop nav links */
+  .site-header .wp-block-navigation-item__content {
+    position: relative;
+  }
+
+  .site-header .wp-block-navigation-item__content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--wp--preset--color--teal, #0f7b82);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 220ms ease;
+  }
+
+  .site-header .wp-block-navigation-item__content:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  .site-header .wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content::after {
+    transform: scaleX(1);
+  }
 }
+
+
 
 
 /* Respect reduced-motion preferences */

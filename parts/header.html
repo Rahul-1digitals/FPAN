@@ -1,7 +1,29 @@
-<!-- wp:group {"tagName":"header","className":"site-header","layout":{"type":"constrained"}} -->
-<header class="wp-block-group site-header"><!-- wp:group {"className":"header__inner","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
-<div class="wp-block-group header__inner"><!-- wp:site-logo {"width":200,"shouldSyncIcon":false} /-->
+<!-- wp:group {"tagName":"header","className":"site-header","layout":{"type":"default"}} -->
+<header class="wp-block-group site-header">
 
-<!-- wp:navigation {"ref":4,"overlayMenu":"mobile","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","justifyContent":"right"}} /-->
-<!-- /wp:group --></header>
+<!-- Row 1: Brand bar — logo left, Member Login button right -->
+<!-- wp:group {"className":"header__brand-bar","layout":{"type":"default"}} -->
+<div class="wp-block-group header__brand-bar">
+
+<!-- wp:site-logo {"width":200,"shouldSyncIcon":false} /-->
+
+<!-- wp:buttons {"className":"header__cta","layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"}} -->
+<div class="wp-block-buttons header__cta"><!-- wp:button {"backgroundColor":"navy","textColor":"white","className":"is-style-fill","style":{"border":{"radius":"8px"}}} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-navy-background-color has-text-color has-background wp-element-button" href="/wp-login.php" style="border-radius:8px">Member Login</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+</div>
+<!-- /wp:group -->
+
+<!-- Row 2: Nav bar — primary navigation -->
+<!-- wp:group {"className":"header__nav-bar","layout":{"type":"default"}} -->
+<div class="wp-block-group header__nav-bar">
+
+<!-- wp:navigation {"ref":4,"overlayMenu":"mobile","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","justifyContent":"left"}} /-->
+
+</div>
+<!-- /wp:group -->
+
+</header>
 <!-- /wp:group -->
