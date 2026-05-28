@@ -6036,68 +6036,308 @@ pre {
    HERO — ANIMATED BACKGROUND KEYFRAMES
    ============================================================================= */
 
+/* Base gradient pan — 6-direction cinematic sweep */
 @keyframes heroGradient {
-  0%   { background-position: 0%   50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0%   50%; }
+  0%   { background-position:   0%  30%; }
+  20%  { background-position:  80%   0%; }
+  40%  { background-position: 100%  70%; }
+  60%  { background-position:  20% 100%; }
+  80%  { background-position:  60%  20%; }
+  100% { background-position:   0%  30%; }
 }
 
+/* ::after orb layer — dramatic scale + translate pulse */
 @keyframes heroOrbs {
-  0%, 100% { opacity: 0.65; transform: scale(1)    translateZ(0); }
-  50%       { opacity: 1.00; transform: scale(1.10) translateZ(0); }
+  0%   { opacity: 0.50; transform: scale(1.00) translate(   0px,   0px) translateZ(0); }
+  25%  { opacity: 0.98; transform: scale(1.30) translate(  45px, -40px) translateZ(0); }
+  50%  { opacity: 0.62; transform: scale(0.82) translate( -35px,  55px) translateZ(0); }
+  75%  { opacity: 1.00; transform: scale(1.25) translate( -55px, -28px) translateZ(0); }
+  100% { opacity: 0.50; transform: scale(1.00) translate(   0px,   0px) translateZ(0); }
 }
 
+/* Entrance animations */
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Independent orb float paths — wide arcs, 7-stop */
+@keyframes heroFloat1 {
+  0%   { transform: translate(    0px,    0px) scale(1.00); opacity: 0.88; }
+  12%  { transform: translate(  150px,  -95px) scale(1.22); opacity: 1.00; }
+  28%  { transform: translate(  210px, -170px) scale(0.78); opacity: 0.62; }
+  45%  { transform: translate(   85px, -240px) scale(1.30); opacity: 0.96; }
+  62%  { transform: translate( -110px, -160px) scale(0.88); opacity: 0.68; }
+  78%  { transform: translate( -170px,  -45px) scale(1.18); opacity: 0.90; }
+  100% { transform: translate(    0px,    0px) scale(1.00); opacity: 0.88; }
+}
+
+@keyframes heroFloat2 {
+  0%   { transform: translate(    0px,    0px) scale(1.00); opacity: 0.74; }
+  18%  { transform: translate( -170px,  120px) scale(1.32); opacity: 1.00; }
+  38%  { transform: translate( -100px,  215px) scale(0.72); opacity: 0.56; }
+  58%  { transform: translate( -215px,  140px) scale(1.25); opacity: 0.92; }
+  78%  { transform: translate( -130px,   45px) scale(0.85); opacity: 0.66; }
+  100% { transform: translate(    0px,    0px) scale(1.00); opacity: 0.74; }
+}
+
+@keyframes heroFloat3 {
+  0%   { transform: translate(    0px,    0px) scale(1.00); opacity: 0.64; }
+  14%  { transform: translate( -140px,  -75px) scale(1.20); opacity: 0.90; }
+  30%  { transform: translate( -215px,   55px) scale(0.80); opacity: 0.70; }
+  50%  { transform: translate( -120px,  175px) scale(1.35); opacity: 0.98; }
+  68%  { transform: translate(   45px,  120px) scale(0.86); opacity: 0.63; }
+  84%  { transform: translate(  110px,  -35px) scale(1.12); opacity: 0.82; }
+  100% { transform: translate(    0px,    0px) scale(1.00); opacity: 0.64; }
+}
+
+@keyframes heroFloat4 {
+  0%   { transform: translate(-50%, -50%) scale(1.00); opacity: 0.58; }
+  14%  { transform: translate(-72%, -84%) scale(1.40); opacity: 0.92; }
+  30%  { transform: translate(-32%, -92%) scale(0.70); opacity: 0.54; }
+  50%  { transform: translate(-78%, -36%) scale(1.35); opacity: 0.98; }
+  68%  { transform: translate(-28%, -65%) scale(0.76); opacity: 0.58; }
+  85%  { transform: translate(-68%, -76%) scale(1.25); opacity: 0.88; }
+  100% { transform: translate(-50%, -50%) scale(1.00); opacity: 0.58; }
+}
+
+@keyframes heroFloat5 {
+  0%   { transform: translate(    0px,    0px) scale(1.00); opacity: 0.50; }
+  20%  { transform: translate(  118px, -130px) scale(1.34); opacity: 0.85; }
+  42%  { transform: translate(  195px,   45px) scale(0.76); opacity: 0.56; }
+  65%  { transform: translate(   65px,  110px) scale(1.26); opacity: 0.90; }
+  84%  { transform: translate(  -88px,   35px) scale(0.88); opacity: 0.54; }
+  100% { transform: translate(    0px,    0px) scale(1.00); opacity: 0.50; }
+}
+
+/* Light beam sweeps — fast, vivid, wide travel */
+@keyframes heroBeam1 {
+  0%   { opacity: 0;    transform: rotate(-22deg) translateX(-18%); }
+  10%  { opacity: 1.00; transform: rotate(-22deg) translateX(  0%); }
+  28%  { opacity: 0.60; transform: rotate(-22deg) translateX( 12%); }
+  48%  { opacity: 0.90; transform: rotate(-22deg) translateX( -9%); }
+  68%  { opacity: 0.38; transform: rotate(-22deg) translateX( 18%); }
+  84%  { opacity: 0.78; transform: rotate(-22deg) translateX( -5%); }
+  100% { opacity: 0;    transform: rotate(-22deg) translateX(-18%); }
+}
+
+@keyframes heroBeam2 {
+  0%   { opacity: 0;    transform: rotate( 14deg) translateX( 14%); }
+  15%  { opacity: 0.85; transform: rotate( 14deg) translateX(  0%); }
+  33%  { opacity: 0.45; transform: rotate( 14deg) translateX(-12%); }
+  55%  { opacity: 0.90; transform: rotate( 14deg) translateX( 10%); }
+  75%  { opacity: 0.32; transform: rotate( 14deg) translateX(-14%); }
+  100% { opacity: 0;    transform: rotate( 14deg) translateX( 14%); }
+}
+
+@keyframes heroBeam3 {
+  0%   { opacity: 0;    transform: rotate(-6deg) scaleX(0.35) scaleY(0.8); }
+  18%  { opacity: 0.70; transform: rotate(-6deg) scaleX(1.30) scaleY(1.1); }
+  42%  { opacity: 0.35; transform: rotate(-6deg) scaleX(0.65) scaleY(0.9); }
+  68%  { opacity: 0.82; transform: rotate(-6deg) scaleX(1.50) scaleY(1.2); }
+  88%  { opacity: 0.38; transform: rotate(-6deg) scaleX(0.90) scaleY(1.0); }
+  100% { opacity: 0;    transform: rotate(-6deg) scaleX(0.35) scaleY(0.8); }
 }
 
 /* ── HERO WRAPPER ─────────────────────────────────────────────*/
 .front-page-hero.wp-block-group {
   position: relative;
   overflow: hidden;
-  background: #071730;
+  background: #040f1e;
   min-height: 600px;
   display: flex;
   align-items: center;
 }
 
-/* Layer 1 — deep-navy animated gradient */
+/* Layer 1 — deep-navy animated gradient (richer, faster) */
 .front-page-hero.wp-block-group::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    #071730 0%,
-    #0a2347 18%,
-    #0e3762 36%,
-    #0b4865 54%,
-    #083250 72%,
-    #071730 100%
+    #040f1e  0%,
+    #071730 12%,
+    #0c2d55 24%,
+    #0e3f6e 36%,
+    #0b5272 48%,
+    #0a3d5c 60%,
+    #082a4a 72%,
+    #071730 84%,
+    #040f1e 100%
   );
-  background-size: 400% 400%;
-  animation: heroGradient 22s ease infinite;
+  background-size: 600% 600%;
+  animation: heroGradient 7s ease infinite;
   z-index: 0;
 }
 
-/* Layer 2 — ambient teal / cyan orb glows */
+/* Layer 2 — wide ambient teal/cyan glows with movement */
 .front-page-hero.wp-block-group::after {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 62% 72% at  8% 65%, rgba(15, 123, 130, 0.24) 0%, transparent 70%),
-    radial-gradient(ellipse 52% 58% at 92% 18%, rgba(20, 168, 176, 0.18) 0%, transparent 65%),
-    radial-gradient(ellipse 42% 52% at 58% 90%, rgba(10,  72, 105, 0.32) 0%, transparent 60%);
-  animation: heroOrbs 20s ease-in-out infinite;
+    radial-gradient(ellipse 65% 75% at  8% 68%, rgba(15, 123, 130, 0.30) 0%, transparent 68%),
+    radial-gradient(ellipse 55% 62% at 94% 16%, rgba(20, 168, 176, 0.24) 0%, transparent 62%),
+    radial-gradient(ellipse 48% 56% at 56% 92%, rgba(10,  72, 105, 0.38) 0%, transparent 58%),
+    radial-gradient(ellipse 40% 45% at 72% 50%, rgba( 0, 195, 210, 0.14) 0%, transparent 60%);
+  animation: heroOrbs 9s ease-in-out infinite;
   z-index: 0;
   pointer-events: none;
 }
 
-.front-page-hero.wp-block-group > * {
+/* Content above orb layers */
+.front-page-hero.wp-block-group > *:not(.hero-orb):not(.hero-beam) {
   position: relative;
   z-index: 1;
+}
+
+/* ── INJECTED ORB LAYERS ──────────────────────────────────────*/
+.hero-orb,
+.hero-beam {
+  position: absolute !important;
+  pointer-events: none;
+  will-change: transform, opacity;
+  z-index: 0 !important;
+}
+
+/* Orb 1 — large teal pool, bottom-left (big travel arc) */
+.hero-orb--1 {
+  width: 920px;
+  height: 920px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    rgba(15, 123, 130, 0.52) 0%,
+    rgba(15, 123, 130, 0.22) 40%,
+    transparent 66%);
+  filter: blur(55px);
+  bottom: -220px;
+  left: -160px;
+  animation: heroFloat1 17s ease-in-out infinite;
+}
+
+/* Orb 2 — vivid cyan, top-right (fast, large arc) */
+.hero-orb--2 {
+  width: 680px;
+  height: 680px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    rgba(20, 168, 176, 0.50) 0%,
+    rgba(20, 168, 176, 0.18) 42%,
+    transparent 66%);
+  filter: blur(46px);
+  top: -110px;
+  right: -90px;
+  animation: heroFloat2 13s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+/* Orb 3 — deep blue mass, right-center (wide arc) */
+.hero-orb--3 {
+  width: 780px;
+  height: 780px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    rgba(10, 72, 105, 0.68) 0%,
+    rgba(10, 72, 105, 0.28) 40%,
+    transparent 62%);
+  filter: blur(60px);
+  top: 18%;
+  right: -160px;
+  animation: heroFloat3 20s ease-in-out infinite;
+  animation-delay: -10s;
+}
+
+/* Orb 4 — bright electric teal, center (fast dance) */
+.hero-orb--4 {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    rgba(0, 235, 248, 0.42) 0%,
+    rgba(0, 215, 228, 0.15) 46%,
+    transparent 66%);
+  filter: blur(36px);
+  top: 50%;
+  left: 42%;
+  animation: heroFloat4 11s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+/* Orb 5 — warm cobalt, upper-center (medium arc) */
+.hero-orb--5 {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    rgba(30, 100, 185, 0.46) 0%,
+    rgba(20,  80, 165, 0.18) 46%,
+    transparent 66%);
+  filter: blur(50px);
+  top: -30px;
+  left: 22%;
+  animation: heroFloat5 15s ease-in-out infinite;
+  animation-delay: -7s;
+}
+
+/* Beam 1 — vivid teal streak, upper diagonal */
+.hero-beam--1 {
+  width: 160%;
+  height: 5px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(15, 165, 180, 0.28) 18%,
+    rgba(20, 225, 240, 0.62) 50%,
+    rgba(15, 165, 180, 0.28) 82%,
+    transparent 100%);
+  filter: blur(2px);
+  top: 25%;
+  left: -30%;
+  transform-origin: center center;
+  animation: heroBeam1 9s ease-in-out infinite;
+}
+
+/* Beam 2 — icy white-blue, lower diagonal */
+.hero-beam--2 {
+  width: 150%;
+  height: 4px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(200, 240, 255, 0.18) 22%,
+    rgba(180, 235, 255, 0.46) 50%,
+    rgba(200, 240, 255, 0.18) 78%,
+    transparent 100%);
+  filter: blur(2px);
+  top: 65%;
+  left: -18%;
+  transform-origin: center center;
+  animation: heroBeam2 12s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+/* Beam 3 — wide teal glow band, mid-hero */
+.hero-beam--3 {
+  width: 130%;
+  height: 110px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(10, 72, 105, 0.26) 22%,
+    rgba(15, 123, 130, 0.42) 50%,
+    rgba(10, 72, 105, 0.26) 78%,
+    transparent 100%);
+  filter: blur(20px);
+  top: 42%;
+  left: -15%;
+  transform-origin: center center;
+  animation: heroBeam3 14s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+/* Editor — disable all motion */
+.editor-styles-wrapper .hero-orb,
+.editor-styles-wrapper .hero-beam {
+  animation: none !important;
+  opacity: 0.3 !important;
 }
 
 /* ── HERO COLUMNS ─────────────────────────────────────────────*/
