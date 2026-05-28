@@ -6032,37 +6032,67 @@ pre {
   transform: none !important;
 }
 
-/* ── HERO ANIMATED BACKGROUND ────────────────────────────────*/
+/* =============================================================================
+   HERO — ANIMATED BACKGROUND KEYFRAMES
+   ============================================================================= */
+
 @keyframes heroGradient {
   0%   { background-position: 0%   50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0%   50%; }
 }
 
+@keyframes heroOrbs {
+  0%, 100% { opacity: 0.65; transform: scale(1)    translateZ(0); }
+  50%       { opacity: 1.00; transform: scale(1.10) translateZ(0); }
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── HERO WRAPPER ─────────────────────────────────────────────*/
 .front-page-hero.wp-block-group {
   position: relative;
   overflow: hidden;
-  background: var(--color-navy);
-  min-height: 580px;
+  background: #071730;
+  min-height: 600px;
   display: flex;
   align-items: center;
 }
 
+/* Layer 1 — deep-navy animated gradient */
 .front-page-hero.wp-block-group::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    #0a2240 0%,
-    #00234b 25%,
-    #003d5c 50%,
-    #0d5069 75%,
-    #00234b 100%
+    #071730 0%,
+    #0a2347 18%,
+    #0e3762 36%,
+    #0b4865 54%,
+    #083250 72%,
+    #071730 100%
   );
   background-size: 400% 400%;
-  animation: heroGradient 14s ease infinite;
+  animation: heroGradient 22s ease infinite;
   z-index: 0;
+}
+
+/* Layer 2 — ambient teal / cyan orb glows */
+.front-page-hero.wp-block-group::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 62% 72% at  8% 65%, rgba(15, 123, 130, 0.24) 0%, transparent 70%),
+    radial-gradient(ellipse 52% 58% at 92% 18%, rgba(20, 168, 176, 0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 42% 52% at 58% 90%, rgba(10,  72, 105, 0.32) 0%, transparent 60%);
+  animation: heroOrbs 20s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .front-page-hero.wp-block-group > * {
@@ -6086,26 +6116,32 @@ pre {
   font-size: var(--text-sm) !important;
   font-weight: var(--font-semibold) !important;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   margin-bottom: var(--space-4) !important;
-  opacity: 0.8;
+  opacity: 0.9;
+  animation: heroFadeUp 0.70s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.10s;
 }
 
 .home-hero__heading.wp-block-heading {
   font-size: clamp(var(--text-2xl), 3.8vw, var(--text-4xl)) !important;
   font-weight: var(--font-bold) !important;
   color: var(--color-white) !important;
-  line-height: 1.18 !important;
-  letter-spacing: -0.025em;
+  line-height: 1.14 !important;
+  letter-spacing: -0.03em;
   margin: 0 0 var(--space-5) !important;
+  animation: heroFadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.22s;
 }
 
 .home-hero__subheading {
   font-size: var(--text-base) !important;
-  line-height: 1.7 !important;
-  color: rgba(255, 255, 255, 0.78) !important;
+  line-height: 1.72 !important;
+  color: rgba(255, 255, 255, 0.72) !important;
   max-width: 46ch;
   margin: 0 0 var(--space-8) !important;
+  animation: heroFadeUp 0.70s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.36s;
 }
 
 .home-hero__ctas.wp-block-buttons {
@@ -6113,38 +6149,42 @@ pre {
   flex-wrap: wrap;
   gap: var(--space-3) !important;
   margin-top: 0 !important;
+  animation: heroFadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.50s;
 }
 
-/* Primary hero CTA */
+/* Primary CTA */
 .home-hero__cta-primary .wp-block-button__link {
   transition:
-    background     var(--transition-fast),
-    box-shadow     var(--transition-fast),
-    transform      var(--transition-fast) !important;
+    background  var(--transition-fast),
+    box-shadow  var(--transition-fast),
+    transform   var(--transition-fast) !important;
 }
 
 .home-hero__cta-primary .wp-block-button__link:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 0 8px 24px rgba(0, 144, 167, 0.45) !important;
+  box-shadow: 0 6px 24px rgba(15, 123, 130, 0.55), 0 2px 6px rgba(0, 0, 0, 0.18) !important;
 }
 
-/* Outline hero CTA */
+/* Outline CTA */
 .home-hero__cta-outline .wp-block-button__link {
-  background: rgba(255, 255, 255, 0.06) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
   color: var(--color-white) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
-  backdrop-filter: blur(6px);
+  border: 1.5px solid rgba(255, 255, 255, 0.36) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition:
-    background     var(--transition-fast),
-    border-color   var(--transition-fast),
-    transform      var(--transition-fast),
-    box-shadow     var(--transition-fast) !important;
+    background    var(--transition-fast),
+    border-color  var(--transition-fast),
+    transform     var(--transition-fast),
+    box-shadow    var(--transition-fast) !important;
 }
 
 .home-hero__cta-outline .wp-block-button__link:hover {
-  background: rgba(255, 255, 255, 0.14) !important;
-  border-color: rgba(255, 255, 255, 0.75) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.72) !important;
   transform: translateY(-2px) !important;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.10) !important;
 }
 
 /* ── HERO SEARCH CARD ─────────────────────────────────────────*/
@@ -6155,16 +6195,33 @@ pre {
 }
 
 .home-hero__search-card {
-  background: var(--color-white);
-  border-radius: 16px;
-  border-top: 3px solid var(--color-teal);
-  padding: 30px 28px 24px;
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  padding: 32px 28px 26px;
   box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.04),
-    0 8px 24px rgba(0, 0, 0, 0.12),
-    0 24px 56px rgba(0, 0, 0, 0.22);
+    0  2px  4px rgba(0, 0, 0, 0.04),
+    0  8px 24px rgba(0, 0, 0, 0.14),
+    0 28px 56px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
   width: 100%;
   max-width: 460px;
+  transition:
+    transform   320ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow  320ms cubic-bezier(0.22, 1, 0.36, 1);
+  animation: heroFadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.44s;
+}
+
+.home-hero__search-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0  4px  8px rgba(0, 0, 0, 0.06),
+    0 16px 36px rgba(0, 0, 0, 0.18),
+    0 40px 80px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.80);
 }
 
 .home-hero__search-card__label {
@@ -6210,8 +6267,8 @@ pre {
   font-size: var(--text-base);
   font-family: inherit;
   color: var(--color-text);
-  background: var(--color-bg);
-  border: 1.5px solid var(--color-border);
+  background: #f7f9fc;
+  border: 1.5px solid rgba(0, 0, 0, 0.10);
   border-radius: var(--radius-md);
   outline: none;
   transition:
@@ -6232,14 +6289,14 @@ pre {
 }
 
 .home-hero__search-input:hover:not(:focus) {
-  border-color: rgba(0, 144, 167, 0.35);
-  background: var(--color-white);
+  border-color: rgba(15, 123, 130, 0.32);
+  background: #ffffff;
 }
 
 .home-hero__search-input:focus {
   border-color: var(--color-teal);
-  background: var(--color-white);
-  box-shadow: 0 0 0 3px rgba(0, 144, 167, 0.12);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(15, 123, 130, 0.14);
 }
 
 .home-hero__search-btn {
@@ -6255,17 +6312,17 @@ pre {
   cursor: pointer;
   letter-spacing: 0.01em;
   transition:
-    background   var(--transition-fast),
-    box-shadow   var(--transition-fast),
-    transform    var(--transition-fast);
+    background  var(--transition-fast),
+    box-shadow  var(--transition-fast),
+    transform   var(--transition-fast);
 }
 
 .home-hero__search-btn:hover,
 .home-hero__search-btn:focus-visible {
-  background: #007a8f;
+  background: #0a6870;
   box-shadow:
-    0 4px 12px rgba(0, 144, 167, 0.35),
-    0 1px 3px rgba(0, 0, 0, 0.1);
+    0 4px 16px rgba(15, 123, 130, 0.45),
+    0 1px 3px rgba(0, 0, 0, 0.12);
   transform: translateY(-1px);
   outline: none;
 }
@@ -6279,12 +6336,12 @@ pre {
 .home-hero__suggestions {
   position: relative;
   background: var(--color-white);
-  border: 1.5px solid rgba(0, 144, 167, 0.5);
+  border: 1.5px solid rgba(15, 123, 130, 0.45);
   border-top: none;
   border-radius: 0 0 var(--radius-md) var(--radius-md);
   box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.04),
-    0 10px 24px rgba(0, 35, 75, 0.1);
+    0 10px 24px rgba(0, 35, 75, 0.10);
   max-height: 260px;
   overflow-y: auto;
   z-index: 100;
@@ -6306,7 +6363,7 @@ pre {
 
 .home-hero__suggestions .provider-suggestion:hover,
 .home-hero__suggestions .provider-suggestion:focus {
-  background: rgba(0, 144, 167, 0.04);
+  background: rgba(15, 123, 130, 0.05);
   outline: none;
 }
 
@@ -6329,7 +6386,7 @@ pre {
   gap: 5px 8px;
   margin-top: 16px;
   padding-top: 14px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   font-size: var(--text-xs);
 }
 
@@ -6343,21 +6400,110 @@ pre {
   color: var(--color-navy);
   text-decoration: none;
   font-weight: var(--font-medium);
-  padding: 3px 8px;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  padding: 4px 10px;
+  background: rgba(13, 43, 85, 0.05);
+  border: 1px solid rgba(13, 43, 85, 0.12);
   border-radius: var(--radius-full);
   transition:
-    background      var(--transition-fast),
-    border-color    var(--transition-fast),
-    color           var(--transition-fast);
+    background    var(--transition-fast),
+    border-color  var(--transition-fast),
+    color         var(--transition-fast),
+    transform     var(--transition-fast),
+    box-shadow    var(--transition-fast);
 }
 
 .home-hero__search-hints a:hover {
-  background: rgba(0, 144, 167, 0.08);
+  background: rgba(15, 123, 130, 0.08);
   border-color: var(--color-teal);
   color: var(--color-teal);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(15, 123, 130, 0.15);
 }
+
+/* ── EDITOR: show animated elements without playing them ──────*/
+.editor-styles-wrapper .home-hero__eyebrow,
+.editor-styles-wrapper .home-hero__heading,
+.editor-styles-wrapper .home-hero__subheading,
+.editor-styles-wrapper .home-hero__ctas,
+.editor-styles-wrapper .home-hero__search-card {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+
+.home-hero__suggestions .provider-suggestion:last-child { border-bottom: none; }
+
+.home-hero__suggestions .provider-suggestion:hover,
+.home-hero__suggestions .provider-suggestion:focus {
+  background: rgba(15, 123, 130, 0.05);
+  outline: none;
+}
+
+.home-hero__suggestions .provider-suggestion__name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-navy);
+}
+
+.home-hero__suggestions .provider-suggestion__meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* ── POPULAR SEARCHES ─────────────────────────────────────────*/
+.home-hero__search-hints {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 8px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: var(--text-xs);
+}
+
+.home-hero__search-hints span {
+  color: var(--color-text-muted);
+  font-weight: var(--font-medium);
+  white-space: nowrap;
+}
+
+.home-hero__search-hints a {
+  color: var(--color-navy);
+  text-decoration: none;
+  font-weight: var(--font-medium);
+  padding: 4px 10px;
+  background: rgba(13, 43, 85, 0.05);
+  border: 1px solid rgba(13, 43, 85, 0.12);
+  border-radius: var(--radius-full);
+  transition:
+    background    var(--transition-fast),
+    border-color  var(--transition-fast),
+    color         var(--transition-fast),
+    transform     var(--transition-fast),
+    box-shadow    var(--transition-fast);
+}
+
+.home-hero__search-hints a:hover {
+  background: rgba(15, 123, 130, 0.08);
+  border-color: var(--color-teal);
+  color: var(--color-teal);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(15, 123, 130, 0.15);
+}
+
+/* ── EDITOR: show animated elements without playing them ──────*/
+.editor-styles-wrapper .home-hero__eyebrow,
+.editor-styles-wrapper .home-hero__heading,
+.editor-styles-wrapper .home-hero__subheading,
+.editor-styles-wrapper .home-hero__ctas,
+.editor-styles-wrapper .home-hero__search-card {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 
 /* ── SHARED SECTION LABELS ────────────────────────────────────*/
 .home-section__eyebrow {
